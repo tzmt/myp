@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locators>
+ <AppIsFor><![CDATA[//select[@id='pg:frm:appIsFor']]]></AppIsFor>
+ 	<YoPersInfo>
+ 		<Title><![CDATA[//input[@id='pg:frm:applicantTitle']]]></Title>
+ 		<FName><![CDATA[//input[@id='pg:frm:FirstName']]]></FName>
+ 		<LName><![CDATA[//input[@id='pg:frm:LastName']]]></LName>
+ 		<CountryOfRes><![CDATA[//select[@id='pg:frm:countryOfResidence']]]></CountryOfRes>
+ 		<EmailAdd><![CDATA[//input[@id='pg:frm:contactEmail']]]></EmailAdd>
+ 		<TeleNum><![CDATA[//input[@id='pg:frm:contactPhone']]]></TeleNum>
+ 		<ApplicantsGen><![CDATA[//select[@id='pg:frm:applicantsGender']]]></ApplicantsGen>
+ 		<MarStatus><![CDATA[//select[@id='pg:frm:applicantsMaritalStatus']]]></MarStatus>
+ 		<Profession><![CDATA[//input[@id='pg:frm:applicantsProfession']]]></Profession>
+ 	</YoPersInfo>
+ 	<Relative1>
+ 		<FirstName><![CDATA[//input[@id='pg:frm:relativePanel:0:relFName']]]></FirstName>
+ 		<LastName><![CDATA[//input[@id='pg:frm:relativePanel:0:relLName']]]></LastName>
+ 		<Relationship><![CDATA[//select[@id='pg:frm:relativePanel:0:relRelationship']]]></Relationship>
+ 	</Relative1>
+ 	<YourBirthLocation>
+ 		<Country><![CDATA[//select[@id='pg:frm:country']]]></Country>
+ 		<ApplicantsBirthState><![CDATA[//input[@id='pg:frm:applicantsBirthState']]]></ApplicantsBirthState>
+ 		<ApplicantsBirthCity><![CDATA[//input[@id='pg:frm:applicantsBirthCity']]]></ApplicantsBirthCity>
+ 	</YourBirthLocation>
+ 	<YourBirthDateAndTime>
+ 		<ApplicantsBirthDay><![CDATA[//select[@id='pg:frm:applicantsBirthDay']]]></ApplicantsBirthDay>
+ 		<ApplicantsBirthMonth><![CDATA[//select[@id='pg:frm:applicantsBirthMonth']]]></ApplicantsBirthMonth>
+ 		<ApplicantsBirthYear><![CDATA[//input[@id='pg:frm:applicantsBirthYear']]]></ApplicantsBirthYear>
+ 		<ApplicantsBirthTimeHour><![CDATA[//select[@id='pg:frm:applicantsBirthTimeHour']]]></ApplicantsBirthTimeHour>
+ 		<ApplicantsBirthTimeMinutes><![CDATA[//select[@id='pg:frm:applicantsBirthTimeMinutes']]]></ApplicantsBirthTimeMinutes>
+ 		<ApplicantsBirthTimeSeconds><![CDATA[//select[@id='pg:frm:applicantsBirthTimeSeconds']]]></ApplicantsBirthTimeSeconds>
+ 		<DaylightSavingsTime><![CDATA[//select[@id='pg:frm:daylightSavingsTime']]]></DaylightSavingsTime>
+ 		<BirthTimeSource><![CDATA[//select[@id='pg:frm:birthTimeSource']]]></BirthTimeSource>
+ 		<BirthTimeAccuracy><![CDATA[//select[@id='pg:frm:birthTimeAccuracy']]]></BirthTimeAccuracy>
+ 	</YourBirthDateAndTime>
+ 	<TMProgram>
+ 		<TMProgPart><![CDATA[//select[@id='pg:frm:tmProgramParticipation']]]></TMProgPart>
+ 	</TMProgram>
+ 	<SubmitAndProceedToStep2><![CDATA[//input[@id='pg:frm:submitBtn']]]></SubmitAndProceedToStep2>
+ 	<DoYouAgree><![CDATA[//select[@id='pg:frm:doYouAgree']]]></DoYouAgree>
+</Locators>  

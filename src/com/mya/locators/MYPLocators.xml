@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locators>
+ <ApplicantType><![CDATA[//*[@id='pg:form:applicantType']]]></ApplicantType>
+ <Country><![CDATA[//*[@id='pg:form:countryofResidence']]]></Country>
+ <SubmitApplication><![CDATA[//*[@id='pg:form:submitBtn']]]></SubmitApplication>
+ <DoYouAgree><![CDATA[//*[@id='pg:form:doYouAgree']]]></DoYouAgree>
+ <DonationMode><![CDATA[//*[@id='pg:form:donationWllBeMAde']]]></DonationMode>
+ <DonationAmount><![CDATA[//*[@id='pg:form:yagyaList:0:donationAmount']]]></DonationAmount>
+ <SelectYagyaCategory><![CDATA[//*[@id='pg:form:yagyaList:0:categoryChoice']]]></SelectYagyaCategory>
+ <EnterYagyaNumber><![CDATA[//*[@id='pg:form:yagyaList:0:yagyaNumber']]]></EnterYagyaNumber>
+ <ApplicantLocation><![CDATA[//*[@id='pg:form:placeOfStay']]]></ApplicantLocation>
+ <CountryOfStay><![CDATA[//*[@id='pg:form:countryOfStay']]]></CountryOfStay>
+ <SelectHealthStatus><![CDATA[//*[@id='pg:form:mentalPhysicalHealth']]]></SelectHealthStatus>
+ <EnterContactEmail><![CDATA[//*[@id='pg:form:contactEmail']]]></EnterContactEmail>
+ <EnterContactPhone><![CDATA[//*[@id='pg:form:contactPhone']]]></EnterContactPhone>
+ <ApplicantBDay><![CDATA[//*[@id='pg:form:applicantsBirthDay']]]></ApplicantBDay>
+ <ApplicantBMonth><![CDATA[//*[@id='pg:form:applicantsBirthMonth']]]></ApplicantBMonth>
+ <ApplicantBYear><![CDATA[//*[@id='pg:form:applicantsBirthYear']]]></ApplicantBYear>
+ <CBCStatus><![CDATA[//*[@id='pg:form:lifeKundaliCompleted']]]></CBCStatus>
+ <BillingPhone><![CDATA[//*[@id='pg:SiteTemplate:frm:billingPhone']]]></BillingPhone>
+ <BillingStreet><![CDATA[//*[@id='pg:SiteTemplate:frm:billingStreet']]]></BillingStreet>
+ <BillingCityName><![CDATA[//*[@id='pg:SiteTemplate:frm:billingCity']]]></BillingCityName>
+ <BillingPostalCode><![CDATA[//*[@id='pg:SiteTemplate:frm:billingPostalCode']]]></BillingPostalCode>
+ <DonateByOtherMean><![CDATA[//*[@id='pg:SiteTemplate:frm:submitBtn3']]]></DonateByOtherMean>
+ <Orgname><![CDATA[//*[@id='pg:form:orgFullName']]]></Orgname>
+ <ContactTitle><![CDATA[id=pg:form:ContactTitle]]></ContactTitle>
+ <ContactFName><![CDATA[id=pg:form:CFNameId]]></ContactFName>
+ <ContactLname><![CDATA[id=pg:form:CLNameId]]></ContactLname>
+ <ContactBDay><![CDATA[id=pg:form:contactBirthDay]]></ContactBDay>
+ <ContactBMonth><![CDATA[id=pg:form:contactBirthMonth]]></ContactBMonth>
+ <contactByear><![CDATA[id=pg:form:contactBirthYear]]></contactByear>
+ <BillingTitle><![CDATA[id=pg:SiteTemplate:frm:billingTitle]]></BillingTitle>
+ <JapanMemberStatus><![CDATA[id=pg:form:memberStatus]]></JapanMemberStatus>
+ <State><![CDATA[id=pg:form:state]]></State>
+ <YMailLogin><![CDATA[id=login]]></YMailLogin>
+ <CheckYMail><![CDATA[//input[@class='sbut']]]></CheckYMail>
+</Locators>  

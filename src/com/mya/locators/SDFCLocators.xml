@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locators>
+ <Login><![CDATA[//*[@id='username']]]></Login>
+ <Password><![CDATA[//*[@id='password']]]></Password>
+ <Submit><![CDATA[//*[@id='Login']]]></Submit>
+ <ApplicantType><![CDATA[//*[@id='pg:form:applicantType']]]></ApplicantType>
+ <Country><![CDATA[//*[@id='pg:form:countryofResidence']]]></Country>
+ <AccountDetails>
+     <CBCMasterID><![CDATA[//table[@class='detailList']/tbody/tr[7]/]]></CBCMasterID>
+ </AccountDetails>
+</Locators>  

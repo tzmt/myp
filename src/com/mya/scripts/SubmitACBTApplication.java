@@ -21,6 +21,7 @@ public class SubmitACBTApplication extends DriverTestCase
 		//Initialize objects
 		sfdchelper = new SFDCHelper(getWebDriver());
 		acbthelper = new ACBTApplicationHelper(getWebDriver());
+		cbchelpers = new CBCApplicationHelper(getWebDriver());
 
 		//variables
 		String lastname = "Khan" +getRandomInteger(1, 9999);
@@ -61,9 +62,6 @@ public class SubmitACBTApplication extends DriverTestCase
 			//Fill in birth location City
 			acbthelper.FillinData("YourBirthLocation.ApplicantsBirthCity", "Noida");
 			
-			//Fill in Gender
-			acbthelper.SelectListItem("YourBirthDetails.Gender", "Male");
-			
 			//Select Applicant's birth day
 			acbthelper.ApplicantBDay("1");
 			
@@ -73,11 +71,27 @@ public class SubmitACBTApplication extends DriverTestCase
 			//Select Applican't birth year
 			acbthelper.ApplicantBYear("1988");
 			
-			//Where were you born
-			acbthelper.SelectListItem("YourBirthDetails.WhereBorn", "Home");
+			//Select Birth time hour
+			acbthelper.SelectListItem("YourBirthDetails.ApplicantBirthHour", "5");
+			
+			//Select Birth time minutes
+			acbthelper.SelectListItem("YourBirthDetails.ApplicantBirthMin", "5");
+			
+			//Select Birth time seconds
+			acbthelper.SelectListItem("YourBirthDetails.ApplicantBirthSeconds", "5");
 			
 			//Select if yes/no/Unsure for Day light saving 
 			acbthelper.SelectListItem("YourBirthDetails.DaylightSavingsTime", "No");
+			
+			//Select Accuracy of the time
+			acbthelper.SelectListItem("YourBirthDetails.Accuracy", "Within 1 second before or after the above time");
+			
+		   //Select location where born
+			acbthelper.SelectListItem("YourBirthDetails.WhereBorn", "Home");
+			acbthelper.waitForWorkAroundTime(4000);
+			
+			//Where were you born
+			acbthelper.SelectListItem("YourBirthDetails.Gender", "Male");
 			
 			//Fill in Health issue 1
 			acbthelper.FillinData("HealthIssues.Issue", "Test health issue");
@@ -99,18 +113,6 @@ public class SubmitACBTApplication extends DriverTestCase
 			acbthelper.SelectListItem("Relatives.Month", "February");
 			acbthelper.FillinData("Relatives.Year", "2006");
 			
-			//Fill in Marriage details 
-			acbthelper.FillinData("Marriage.Event", "Test Event");
-			acbthelper.SelectListItem("Marriage.Day", "3");
-			acbthelper.SelectListItem("Marriage.Month", "February");
-			acbthelper.FillinData("Marriage.Year", "2001");
-			
-			//Fill in Divorce details
-			acbthelper.FillinData("Divorce.Event", "Test Divorce Event");
-			acbthelper.SelectListItem("Divorce.Day", "7");
-			acbthelper.SelectListItem("Divorce.Month", "February");
-			acbthelper.FillinData("Divorce.Year", "2015");
-			
 			//Fill in Child details
 			acbthelper.SelectListItem("Child.Relationship", "Son");
 			acbthelper.SelectListItem("Child.Day", "7");
@@ -124,9 +126,79 @@ public class SubmitACBTApplication extends DriverTestCase
 			acbthelper.SelectListItem("YoungerSiblings", "Sister");
 			acbthelper.FillinData("Marriage.Year", "2001");
 			
+			//Select TM Program
+			acbthelper.SelectListItem("TMProgram", "Not Yet Practicing TM");
+			
+			//Enter Journey details
+			acbthelper.FillinData("Journey.PlaceVisited", "Tester Qa");
+			acbthelper.SelectListItem("Journey.DepartureDay","2");
+			acbthelper.SelectListItem("Journey.DepartureMonth","April");
+			acbthelper.FillinData("Journey.DepartureYear","2001");
+			acbthelper.SelectListItem("Journey.ReturnDay","2");
+			acbthelper.SelectListItem("Journey.ReturnMonth","April");
+			acbthelper.FillinData("Journey.ReturnYear","2001");
+			
+			//Enter Major loss details
+			acbthelper.FillinData("Loss.LEvent", "Loss Test");
+			acbthelper.SelectListItem("Loss.LDay", "4");
+			acbthelper.SelectListItem("Loss.LMonth","April");
+			acbthelper.FillinData("Loss.LYear","2001");
+			
+			//Enter Major gains details
+			acbthelper.FillinData("Gains.GEvent", "Gain Test");
+			acbthelper.SelectListItem("Gains.GDay", "7");
+			acbthelper.SelectListItem("Gains.GMonth","April");
+			acbthelper.FillinData("Gains.GYear","2001");
+			
+			//Enter Education break details
+			acbthelper.SelectListItem("EBreak.FDay","2");
+			acbthelper.SelectListItem("EBreak.FMonth","April");
+			acbthelper.FillinData("EBreak.FYear","2001");
+			acbthelper.SelectListItem("EBreak.TDay","2");
+			acbthelper.SelectListItem("EBreak.TMonth","April");
+			acbthelper.FillinData("EBreak.TYear","2001");
+			acbthelper.FillinData("EBreak.Description", "Tester Qa");
+			
+			//Enter Occupation details
+			acbthelper.FillinData("Occupation.ODescription", "Occupation Qa");
+			acbthelper.SelectListItem("Occupation.FDay","2");
+			acbthelper.SelectListItem("Occupation.FMonth","April");
+			acbthelper.FillinData("Occupation.FYear","2002");
+			acbthelper.SelectListItem("Occupation.ToDay","2");
+			acbthelper.SelectListItem("Occupation.ToMonth","April");
+			acbthelper.FillinData("Occupation.ToYear","2003");
+			
+			//Select Inheritance
+			acbthelper.SelectListItem("Inheritance", "No");
+			
+			//Fill in Marriage details 
+			acbthelper.FillinData("Marriage.Event", "Test Event");
+			acbthelper.SelectListItem("Marriage.Day", "3");
+			acbthelper.SelectListItem("Marriage.Month", "February");
+			acbthelper.FillinData("Marriage.Year", "2001");
+			
+			//Fill in Auspicious event details
+			acbthelper.FillinData("AEvents.AEvent", "Test Event");
+			acbthelper.SelectListItem("AEvents.ADay", "3");
+			acbthelper.SelectListItem("AEvents.AMonth", "February");
+			acbthelper.FillinData("AEvents.AYear", "2017");
+			
+			//Fill in Inauspicious event details
+			acbthelper.FillinData("IEvents.IEvent", "Test Event");
+			acbthelper.SelectListItem("IEvents.IDay", "6");
+			acbthelper.SelectListItem("IEvents.IMonth", "May");
+			acbthelper.FillinData("IEvents.IYear", "2017");
+			
+			//Fill in other event details
+			acbthelper.FillinData("OEvents.OEvent", "Test Event");
+			acbthelper.SelectListItem("OEvents.ODay", "6");
+			acbthelper.SelectListItem("OEvents.OMonth", "May");
+			acbthelper.FillinData("OEvents.OYear", "2017");
+			
+			
 			//select Body height unit and height 
 			acbthelper.SelectListItem("BodyHeight.Unit", "Centimeters");
-			acbthelper.waitForWorkAroundTime(3000);
+			acbthelper.waitForWorkAroundTime(4000);
 			acbthelper.FillinData("BodyHeight.Height", "175");
 			
 			//select body weight unit and weight 
@@ -137,29 +209,72 @@ public class SubmitACBTApplication extends DriverTestCase
 			//Select type of decisions making
 			acbthelper.SelectListItem("DecisionMakingPatterns", "I make quick decisions but also change them quickly");
 			
-			//select Inheritance 
-			acbthelper.SelectListItem("Inheritance", "No");
-			
 			//select DoYouAgree
 			acbthelper.SelectListItem("DoYouAgree", "Yes, I agree to the conditions.");
 			
 			//Click Submit button to move on step 2
 			acbthelper.ClickItem("SubmitForm");
 			
-			//Wait for upload personal photo screen
-			acbthelper.WaitForElementPresent("id=files", 30);
-			
-			//Upload personal photo
-			acbthelper.UploadFile();
-			
-			//Wait for workaround time
-			acbthelper.waitForWorkAroundTime(3000);
+			//Click on Update button
+			acbthelper.ClickItem("Update");
+			acbthelper.waitForWorkAroundTime(2000);
 			
 			//click Submit in order to proceed for payment 
-			acbthelper.ClickItem("SaveImgAndPay");
+			acbthelper.ClickItem("UploadImgLater");
+			
+			//Wait for upload personal photo screen
+			//acbthelper.WaitForElementPresent("id=files", 30);
+			
+			//Upload personal photo
+			//acbthelper.UploadFile();
+			
+			//Wait for workaround time
+			//acbthelper.waitForWorkAroundTime(3000);
+			
+			//click Submit in order to proceed for payment 
+			//acbthelper.ClickItem("SaveImgAndPay");
 			
 			//validate billing page
 			acbthelper.ValidateBillingPage();
+			
+			//fill in Billing Phone 
+			cbchelpers.FillinData("BillingInfo.BillingPhone", "5676546766");
+			
+			//Fill in Billing Street
+			cbchelpers.FillinData("BillingInfo.BillingStreet", "Test");
+			
+			//Fill in Billing city 
+			cbchelpers.FillinData("BillingInfo.BillingCity", "Noida");
+			
+			//Fill in postal code
+			cbchelpers.FillinData("BillingInfo.Postalcode", "201301");
+			
+			//Select privacy policy check box
+			cbchelpers.ClickItem("BillingInfo.PrivacyPolicy");
+			
+			//Pay by other options
+			cbchelpers.ClickItem("BillingInfo.PayByOther");
+			
+			//Wait for workaround time
+			cbchelpers.waitForWorkAroundTime(4000);
+			
+			//Now got to SFDC
+			sfdchelper.LoginIntoSFDC(sfdc_url, username, password);
+			
+			//Wait For Home page load
+			sfdchelper.waitForWorkAroundTime(6000);
+			
+			//Select iFrame on with classic theme
+			sfdchelper.SelectiFrame("MJYUnbilledApplications");
+			
+			//Click on Newly Added Account name
+			sfdchelper.clickOn("link=Aman "+lastname);
+			
+			//Wait for element using xml node
+			sfdchelper.WaitForItem("AccountDetails.AccountTitle", 40);
+			
+			//Verify Account Details page
+			sfdchelper.VerifySFDCPageTitle("Account Detail");
 			
 
 		}

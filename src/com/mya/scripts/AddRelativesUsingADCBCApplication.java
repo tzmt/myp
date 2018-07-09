@@ -99,14 +99,17 @@ public class AddRelativesUsingADCBCApplication extends DriverTestCase
 			//Select TM program participation 
 			cbchelpers.SelectListItem("TMProgram.TMProgPart", "Not Yet Practicing TM");
 			
+			//Select response for Do you agree 
+			cbchelpers.SelectListItem("DoYouAgree", "Yes, I agree to the conditions.");
+			
 			//Click Submit button to move on step 2
 			cbchelpers.ClickItem("SubmitAndProceedToStep2");
 			
 			//Wait for step 2 page to load 
 			cbchelpers.waitForWorkAroundTime(3000);
 			
-			//Select response for Do you agree 
-			cbchelpers.SelectListItem("DoYouAgree", "Yes, I agree to the conditions.");
+			//Confirm third party consent
+			myphelpers.SelectConsent("Yes");
 			
 			//Submit the application now 
 			cbchelpers.ClickItem("SubmitAndProceedToStep2");

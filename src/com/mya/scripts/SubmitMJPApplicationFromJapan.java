@@ -92,6 +92,9 @@ public class SubmitMJPApplicationFromJapan extends DriverTestCase
 			//confirm agreement with the terms
 			myphelpers.ConfirmTerms("Yes, I agree to the conditions");
 			
+			//Confirm third party consent
+			myphelpers.SelectConsent("Yes");
+			
 			//Wait for a second
 			myphelpers.waitForWorkAroundTime(3000);
 			
@@ -126,7 +129,7 @@ public class SubmitMJPApplicationFromJapan extends DriverTestCase
 			sfdchelper.waitForWorkAroundTime(6000);
 			
 			//Select iFrame
-			sfdchelper.SelectiFrame("066o0000002HNjw");
+			sfdchelper.SelectiFrame("MJYUnbilledApplications");
 			
 			//Click on Newly Added Account name
 			sfdchelper.clickOn("link=Aman "+lastname);

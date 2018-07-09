@@ -43,6 +43,13 @@ public class ACBTApplicationHelper extends DriverHelper {
 		waitForWorkAroundTime(300);
 	}
 
+	//Select Applicant Birth Type 
+		public void BirthCountry(String value)
+		{
+			String country = acbtlocator.getLocator("Country");
+			selectDropDown(country, value);
+			waitForWorkAroundTime(300);
+		}
 
 	//Enter contact's email address
 	public void EnterContactEmail(String email)
@@ -87,7 +94,7 @@ public class ACBTApplicationHelper extends DriverHelper {
 	{
 		String country = acbtlocator.getLocator("YoPersInfo.CountryOfRes");
 		selectDropDown(country, value);
-		waitForWorkAroundTime(300);
+		waitForWorkAroundTime(400);
 	}
 
 

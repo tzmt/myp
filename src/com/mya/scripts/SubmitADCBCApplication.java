@@ -61,10 +61,10 @@ public class SubmitADCBCApplication extends DriverTestCase
 			cbchelpers.ApplicantBYear("1988");
 			
 			//Fill in MMartial status
-			cbchelpers.SelectListItem("YoPersInfo.MarStatus", "Single");
+			//cbchelpers.SelectListItem("YoPersInfo.MarStatus", "Single");
 			
 		    //Fill in Relative First Name
-			adcbchelper.FillinData("Relative1.FirstName", "Aslam");
+			adcbchelper.FillinData("Relative1.FirstName", "Aman");
 			
 			//fill in Relative Last name
 			adcbchelper.FillinData("Relative1.LastName", lastname);
@@ -75,8 +75,14 @@ public class SubmitADCBCApplication extends DriverTestCase
 			//Select response for Do you agree 
 			cbchelpers.SelectListItem("DoYouAgree", "Yes, I agree to the conditions.");
 			
+			//Select Third party compliance
+			cbchelpers.SelectListItem("Consent","Yes");
+			
 			//Submit the application now 
 			cbchelpers.ClickItem("SubmitAndProceedToStep2");
+			
+			//Click on Update button
+			cbchelpers.ClickItem("Update");
 			
 			//Wait for step 2 page to load 
 			cbchelpers.waitForWorkAroundTime(12000);
@@ -96,6 +102,9 @@ public class SubmitADCBCApplication extends DriverTestCase
 			//Fill in postal code
 			cbchelpers.FillinData("BillingInfo.Postalcode", "201301");
 			
+			//Select privacy check box
+			cbchelpers.ClickItem("BillingInfo.PrivacyPolicy");
+			
 			//Pay by other options
 			cbchelpers.ClickItem("BillingInfo.PayByOther");
 			
@@ -109,7 +118,7 @@ public class SubmitADCBCApplication extends DriverTestCase
 			sfdchelper.waitForWorkAroundTime(6000);
 			
 			//Select iFrame
-			sfdchelper.SelectiFrame("066o0000002HNjw");
+			sfdchelper.SelectiFrame("MJYUnbilledApplications");
 			
 			//Click on Newly Added Account name
 			sfdchelper.clickOn("link=Aman "+lastname);

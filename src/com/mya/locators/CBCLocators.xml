@@ -12,6 +12,22 @@
  		<MarStatus><![CDATA[//select[@id='pg:frm:applicantsMaritalStatus']]]></MarStatus>
  		<Profession><![CDATA[//input[@id='pg:frm:applicantsProfession']]]></Profession>
  	</YoPersInfo>
+ 	<OrgInfo>
+ 	    <ContactTitle><![CDATA[//input[@id='pg:frm:ContactTitle']]]></ContactTitle>
+ 		<ContactFName><![CDATA[//input[@id='pg:frm:ContactFirstName']]]></ContactFName>
+ 		<ContactLName><![CDATA[//input[@id='pg:frm:ContactLastName']]]></ContactLName>
+ 		<ContactBirthDay><![CDATA[//select[@id='pg:frm:contactBirthDay']]]></ContactBirthDay>
+ 		<ContactBirthMonth><![CDATA[//select[@id='pg:frm:contactBirthMonth']]]></ContactBirthMonth>
+ 		<ContactBirthYear><![CDATA[//input[@id='pg:frm:contactBirthYear']]]></ContactBirthYear>
+ 		<ContactCountryOfRes><![CDATA[//select[@id='pg:frm:concountryOfResidence']]]></ContactCountryOfRes>
+ 		<ContactEmailAdd><![CDATA[//input[@id='pg:frm:contactEmail']]]></ContactEmailAdd>
+ 		<ContactTeleNum><![CDATA[//input[@id='pg:frm:contactPhone']]]></ContactTeleNum>
+ 	    <OrgName><![CDATA[//input[@id='pg:frm:orgFullName']]]></OrgName>
+ 	    <OrgDescription><![CDATA[//input[@id='pg:frm:organizationDescription']]]></OrgDescription>
+ 	    <LegalEstablish><![CDATA[//select[@id='pg:frm:countryOfResidence-Applicant']]]></LegalEstablish>
+ 	    <EstablishOrg><![CDATA[//select[@id='pg:frm:countryOfResidence-Organization']]]></EstablishOrg>
+ 	      
+ 	</OrgInfo>
  	<YourBirthLocation>
  		<Country><![CDATA[//select[@id='pg:frm:country']]]></Country>
  		<ApplicantsBirthState><![CDATA[//input[@id='pg:frm:applicantsBirthState']]]></ApplicantsBirthState>
@@ -33,11 +49,24 @@
  	</TMProgram>
  	<SubmitAndProceedToStep2><![CDATA[//input[@id='pg:frm:submitBtn']]]></SubmitAndProceedToStep2>
  	<DoYouAgree><![CDATA[//select[@id='pg:frm:doYouAgree']]]></DoYouAgree>
+ 	<Update><![CDATA[//input[@id='pg:frm:update']]]></Update>
  	<BillingInfo>
+ 	    <BillingTitle><![CDATA[//input[@id='pg:SiteTemplate:frm:billingTitle']]]]></BillingTitle>
  		<BillingPhone><![CDATA[//input[@id='pg:SiteTemplate:frm:billingPhone']]]></BillingPhone>
  		<BillingStreet><![CDATA[//textarea[@id='pg:SiteTemplate:frm:billingStreet']]]></BillingStreet>
  		<BillingCity><![CDATA[//input[@id='pg:SiteTemplate:frm:billingCity']]]></BillingCity>
  		<Postalcode><![CDATA[//input[@id='pg:SiteTemplate:frm:billingPostalCode']]]></Postalcode>
  		<PayByOther><![CDATA[//input[@id='pg:SiteTemplate:frm:submitBtn3']]]></PayByOther>
+ 		<PrivacyPolicy><![CDATA[//input[@id='pg:SiteTemplate:frm:privacy']]]></PrivacyPolicy>
+ 		<PayByCC><![CDATA[//input[@id='pg:SiteTemplate:frm:submitBtn']]]><CheckOut></CheckOut></PayByCC>
  	</BillingInfo>
+ 	<CheckOut>
+ 	     <CardNumber><![CDATA[//input[@id='cardNumberID']]]></CardNumber>
+ 	     <ExpirationDateMonth><![CDATA[//select[@id='monthID']]]></ExpirationDateMonth>
+ 	     <ExpirationDateYear><![CDATA[//select[@id='yearID']]]></ExpirationDateYear>
+ 	     <CardSecurityCode><![CDATA[//input[@id='cardCodeID']]]></CardSecurityCode>
+ 	     <Pay><![CDATA[//span[@id='pg:SiteTemplate:j_id81']/span[2]/span/button[2]]]></Pay>
+ 	     <Cancel><![CDATA[//span[@id='pg:SiteTemplate:j_id81']/span[2]/span/button[1]]]></Cancel>
+ 	</CheckOut>
+ 	<Consent><![CDATA[//*[@id='pg:frm:consentAP']]]></Consent>
 </Locators>  

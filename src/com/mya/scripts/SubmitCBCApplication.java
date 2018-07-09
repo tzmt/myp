@@ -99,20 +99,23 @@ public class SubmitCBCApplication extends DriverTestCase
 			//Select TM program participation 
 			cbchelpers.SelectListItem("TMProgram.TMProgPart", "Not Yet Practicing TM");
 			
+			//Select response for Do you agree 
+			cbchelpers.SelectListItem("DoYouAgree", "Yes, I agree to the conditions.");
+			
 			//Click Submit button to move on step 2
 			cbchelpers.ClickItem("SubmitAndProceedToStep2");
 			
 			//Wait for step 2 page to load 
 			cbchelpers.waitForWorkAroundTime(3000);
 			
-			//Select response for Do you agree 
-			cbchelpers.SelectListItem("DoYouAgree", "Yes, I agree to the conditions.");
-			
 			//Submit the application now 
 			cbchelpers.ClickItem("SubmitAndProceedToStep2");
 			
 			//Wait for step 2 page to load 
 			cbchelpers.waitForWorkAroundTime(6000);
+			
+			//Click on Update button
+			cbchelpers.ClickItem("Update");
 			
 			//Validate Billing information page
 			adcbchelper.ValidateBillingPage();
@@ -129,6 +132,9 @@ public class SubmitCBCApplication extends DriverTestCase
 			//Fill in postal code
 			cbchelpers.FillinData("BillingInfo.Postalcode", "201301");
 			
+			//Select privacy policy check box
+			cbchelpers.ClickItem("BillingInfo.PrivacyPolicy");
+			
 			//Pay by other options
 			cbchelpers.ClickItem("BillingInfo.PayByOther");
 			
@@ -142,7 +148,7 @@ public class SubmitCBCApplication extends DriverTestCase
 			sfdchelper.waitForWorkAroundTime(6000);
 			
 			//Select iFrame on with classic theme
-			//sfdchelper.SelectiFrame("066o0000002HNjw");
+			sfdchelper.SelectiFrame("MJYUnbilledApplications");
 			
 			//Click on Newly Added Account name
 			sfdchelper.clickOn("link=Aman "+lastname);
@@ -151,7 +157,7 @@ public class SubmitCBCApplication extends DriverTestCase
 			sfdchelper.WaitForItem("AccountDetails.AccountTitle", 40);
 			
 			//Verify Account Details page
-			sfdchelper.VerifySFDCPageTitle("Account");
+			sfdchelper.VerifySFDCPageTitle("Account Detail");
 
 		}
 

@@ -5,7 +5,17 @@
  <Submit><![CDATA[//*[@id='Login']]]></Submit>
  <ApplicantType><![CDATA[//*[@id='pg:form:applicantType']]]></ApplicantType>
  <Country><![CDATA[//*[@id='pg:form:countryofResidence']]]></Country>
+ <SearchField><![CDATA[//input[@id='phSearchInput']]]></SearchField>
+ <Search><![CDATA[//input[@id='phSearchButton']]]></Search>
+ <Payment><![CDATA[//input[@id='//*[@id='Payment__c_body']/table/tbody/tr[2]/th/a']]]></Payment>
  <AccountDetails>
      <CBCMasterID><![CDATA[//table[@class='detailList']/tbody/tr[7]/]]></CBCMasterID>
+     <AccountTitle><![CDATA[//*[@id='00No0000009sPfC_ileinner']]]></AccountTitle>
+     <CBCMasterCode><![CDATA[//div[@id='CF00No0000009sPfD_ileinner']/a]]></CBCMasterCode>
  </AccountDetails>
+ <LinkBuilder>
+       <SelectApplication><![CDATA[//select[@id='54:0']]]></SelectApplication>
+       <Link><![CDATA[//*[@id='lightning']/div/div[2]/div[3]/div[9]/a]]]></Link>
+ 
+ </LinkBuilder>
 </Locators>  

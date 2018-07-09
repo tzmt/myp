@@ -42,7 +42,14 @@ public class CBCApplicationHelper extends DriverHelper {
 	public void EnterContactEmail(String email)
 	{
 		String locator = cbclocator.getLocator("YoPersInfo.EmailAdd");
-		sendKeys(locator, email);
+		sendKeys(locator, email);	
+	}
+		
+		//Enter your's email address
+		public void EnterYourtEmail(String email)
+		{
+			String locator = cbclocator.getLocator("OrgInfo.ContactEmailAdd");
+			sendKeys(locator, email);
 	}
 
 	//Fill in contact's phone number
@@ -51,13 +58,20 @@ public class CBCApplicationHelper extends DriverHelper {
 		String locator = cbclocator.getLocator("YoPersInfo.TeleNum");
 		sendKeys(locator, phone);
 	}
+	
+	//Fill in your's phone number
+		public void EnterYourPhone(String phone)
+		{
+			String locator = cbclocator.getLocator("OrgInfo.ContactTeleNum");
+			sendKeys(locator, phone);
+		}
 
 	//Select Applicant's birth day
 	public void ApplicantBDay(String BDay)
 	{
 		String locator = cbclocator.getLocator("YourBirthDateAndTime.ApplicantsBirthDay");
 		selectDropDown(locator, BDay);
-		waitForWorkAroundTime(300);
+		waitForWorkAroundTime(100);
 	}
 
 	//Select Applicant's Birth month
@@ -65,7 +79,7 @@ public class CBCApplicationHelper extends DriverHelper {
 	{
 		String locator = cbclocator.getLocator("YourBirthDateAndTime.ApplicantsBirthMonth");
 		selectDropDown(locator, BMonth);
-		waitForWorkAroundTime(300);
+		waitForWorkAroundTime(100);
 	}
 
 	//Select Applican't birth year
@@ -74,6 +88,22 @@ public class CBCApplicationHelper extends DriverHelper {
 		String locator = cbclocator.getLocator("YourBirthDateAndTime.ApplicantsBirthYear");
 		sendKeys(locator, year);
 	}
+	
+	//Select Expiration date Month
+		public void ExpirationMonth(String EMonth)
+		{
+			String locator = cbclocator.getLocator("CheckOut.ExpirationDateMonth");
+			selectDropDown(locator, EMonth);
+			waitForWorkAroundTime(100);
+		}
+		
+	//Select Expiration date Month
+			public void ExpirationYear(String EYear)
+			{
+				String locator = cbclocator.getLocator("CheckOut.ExpirationDateYear");
+				selectDropDown(locator, EYear);
+				waitForWorkAroundTime(100);
+				}
 
 
 	//select country of stay
@@ -84,6 +114,22 @@ public class CBCApplicationHelper extends DriverHelper {
 		waitForWorkAroundTime(300);
 	}
 
+	//select contact country of Residence
+		public void Selectcontactcountry(String value)
+		{
+			String country = cbclocator.getLocator("OrgInfo.ContactCountryOfRes");
+			selectDropDown(country, value);
+			waitForWorkAroundTime(400);
+		}
+	
+	// Select country of legal establishment 
+		public void Selectorgcountry(String value)
+		{
+			String country = cbclocator.getLocator("OrgInfo.LegalEstablish");
+			selectDropDown(country, value);
+			waitForWorkAroundTime(200);
+		}
+		
 
 	//Enter location of applicant during performance
 	public void EnterApplicantLocation(String location)
@@ -201,7 +247,7 @@ public class CBCApplicationHelper extends DriverHelper {
 	{
 		String locator = cbclocator.getLocator(xmlnode);
 		selectDropDown(locator, value);
-		waitForWorkAroundTime(3000);
+		waitForWorkAroundTime(2000);
 	}
 
 	//click Xml node

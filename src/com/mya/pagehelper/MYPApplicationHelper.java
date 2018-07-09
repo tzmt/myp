@@ -36,6 +36,14 @@ public class MYPApplicationHelper extends DriverHelper {
 		selectDropDown(country, value);
 		waitForWorkAroundTime(300);
 	}
+	
+	//Select Departed country of residence  
+	public void SelectDepartedCountry(String value)
+	{
+		String country = myplocator.getLocator("DepartedResidence");
+		selectDropDown(country, value);
+		waitForWorkAroundTime(300);
+	}
 
 
 	//Enter contact's email address
@@ -50,6 +58,20 @@ public class MYPApplicationHelper extends DriverHelper {
 	{
 		String locator = myplocator.getLocator("EnterContactPhone");
 		sendKeys(locator, phone);
+	}
+	
+	//Enter contact departed phone number
+	public void EnterContactDPhone(String phone)
+	{
+		String locator = myplocator.getLocator("EnterContactDepartedPhone");
+		sendKeys(locator, phone);
+	}
+	
+	//Enter contact departed email address
+	public void EnterContactDEmail(String email)
+	{
+		String locator = myplocator.getLocator("EnterContactDepartedEmail");
+		sendKeys(locator, email);
 	}
 
 	//Select Applicant's birth day
@@ -74,6 +96,14 @@ public class MYPApplicationHelper extends DriverHelper {
 		String locator = myplocator.getLocator("ApplicantBYear");
 		sendKeys(locator, year);
 	}
+	
+	//Select Departed birth day
+	public void DepartedtBDay(String BDay)
+	{
+		String locator = myplocator.getLocator("ApplicantBDay");
+		selectDropDown(locator, BDay);
+		waitForWorkAroundTime(300);
+	}
 
 	//Select Yes/No for CBC completed for applicant
 	public void CBCStatus(String CBCStatus)
@@ -95,6 +125,14 @@ public class MYPApplicationHelper extends DriverHelper {
 	public void SelectCountryOfStay(String value)
 	{
 		String country = myplocator.getLocator("CountryOfStay");
+		selectDropDown(country, value);
+		waitForWorkAroundTime(300);
+	}
+	
+	//select Contact country of residence
+	public void SelectConCountryOfResidence(String value)
+	{
+		String country = myplocator.getLocator("ConCountryResidence");
 		selectDropDown(country, value);
 		waitForWorkAroundTime(300);
 	}
@@ -140,6 +178,14 @@ public class MYPApplicationHelper extends DriverHelper {
 	public void ConfirmTerms(String value)
 	{
 		String locator = myplocator.getLocator("DoYouAgree");
+		selectDropDown(locator, value);
+		waitForWorkAroundTime(300);
+	}
+	
+	//Third party consent
+	public void SelectConsent(String value)
+	{
+		String locator = myplocator.getLocator("Consent");
 		selectDropDown(locator, value);
 		waitForWorkAroundTime(300);
 	}

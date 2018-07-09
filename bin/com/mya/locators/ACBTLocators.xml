@@ -19,6 +19,11 @@
  		<ApplicantsBirthDay><![CDATA[//select[@id='pg:Form:applicantsBirthDay']]]></ApplicantsBirthDay>
  		<ApplicantsBirthMonth><![CDATA[//select[@id='pg:Form:applicantsBirthMonth']]]></ApplicantsBirthMonth>
  		<ApplicantsBirthYear><![CDATA[//input[@id='pg:Form:applicantsBirthYear']]]></ApplicantsBirthYear>
+ 		<ApplicantBirthHour><![CDATA[//select[@id='pg:Form:btHours']]]></ApplicantBirthHour>
+ 		<ApplicantBirthMin><![CDATA[//select[@id='pg:Form:btMinutes']]]></ApplicantBirthMin>
+ 		<ApplicantBirthSeconds><![CDATA[//select[@id='pg:Form:btSeconds']]]></ApplicantBirthSeconds>
+ 		<Accuracy><![CDATA[//select[@id='pg:Form:sourceAccuracy']]]></Accuracy>
+ 		<BirthTimeSource><![CDATA[//select[@id='pg:Form:birthtimesource']]]></BirthTimeSource>
  		<WhereBorn><![CDATA[//select[@id='pg:Form:whereBorn']]]></WhereBorn>
  		<BirthTimeIs><![CDATA[//select[@id='pg:Form:birthTimeIs']]]></BirthTimeIs>
  		<DaylightSavingsTime><![CDATA[//select[@id='pg:Form:daylightSavingsTime']]]></DaylightSavingsTime>
@@ -48,17 +53,69 @@
  		<YoungerSibling><![CDATA[//input[@id='pg:Form:youngerSiblings:0:removeElder']]]></YoungerSibling>
  	</RemoveSections>
  	<Marriage>
- 		<Event><![CDATA[//input[@id='pg:Form:marriageList:0:eventDes']]]></Event>
+ 		<Event><![CDATA[//input[@id='pg:Form:marriageList:0:marDes']]]></Event>
  		<Day><![CDATA[//select[@id='pg:Form:marriageList:0:mDay']]]></Day>
  		<Month><![CDATA[//select[@id='pg:Form:marriageList:0:mMonth']]]></Month>
  		<Year><![CDATA[//input[@id='pg:Form:marriageList:0:mYear']]]></Year>
  	</Marriage>
- 	<Divorce>
- 		<Event><![CDATA[//input[@id='pg:Form:divorceList:0:eventDes']]]></Event>
- 		<Day><![CDATA[//select[@id='pg:Form:divorceList:0:dDay']]]></Day>
- 		<Month><![CDATA[//select[@id='pg:Form:divorceList:0:dMonth']]]></Month>
- 		<Year><![CDATA[//input[@id='pg:Form:divorceList:0:dYear']]]></Year>
- 	</Divorce>
+ 	<Journey>
+ 		<PlaceVisited><![CDATA[//input[@id='pg:Form:journeyList:0:place']]]></PlaceVisited>
+ 		<DepartureDay><![CDATA[//select[@id='pg:Form:journeyList:0:depDay']]]></DepartureDay>
+ 		<DepartureMonth><![CDATA[//select[@id='pg:Form:journeyList:0:depMonth']]]></DepartureMonth>
+ 		<DepartureYear><![CDATA[//input[@id='pg:Form:journeyList:0:depYear']]]></DepartureYear>
+ 		<ReturnDay><![CDATA[//select[@id='pg:Form:journeyList:0:retDay']]]></ReturnDay>
+ 		<ReturnMonth><![CDATA[//select[@id='pg:Form:journeyList:0:retMonth']]]></ReturnMonth>
+ 		<ReturnYear><![CDATA[//input[@id='pg:Form:journeyList:0:retYear']]]></ReturnYear>
+ 	</Journey>
+ 	<Loss>
+ 	    <LEvent><![CDATA[//input[@id='pg:Form:majorLossList:0:eventDes']]]></LEvent>
+ 	    <LDay><![CDATA[//select[@id='pg:Form:majorLossList:0:dDay']]]></LDay>
+ 	    <LMonth><![CDATA[//select[@id='pg:Form:majorLossList:0:dMonth']]]></LMonth>
+ 	    <LYear><![CDATA[//input[@id='pg:Form:majorLossList:0:dYear']]]></LYear>
+ 	</Loss>
+ 	<Gains>
+ 	    <GEvent><![CDATA[//input[@id='pg:Form:majorGainList:0:eventDes']]]></GEvent>
+ 	    <GDay><![CDATA[//select[@id='pg:Form:majorGainList:0:dDay']]]></GDay>
+ 	    <GMonth><![CDATA[//select[@id='pg:Form:majorGainList:0:dMonth']]]></GMonth>
+ 	    <GYear><![CDATA[//input[@id='pg:Form:majorGainList:0:dYear']]]></GYear>
+ 	</Gains>
+ 	<EBreak>
+ 		<Description><![CDATA[//input[@id='pg:Form:eduBreakList:0:eduBreakDes']]]></Description>
+ 		<FDay><![CDATA[//select[@id='pg:Form:eduBreakList:0:depDay']]]></FDay>
+ 		<FMonth><![CDATA[//select[@id='pg:Form:eduBreakList:0:depMonth']]]></FMonth>
+ 		<FYear><![CDATA[//input[@id='pg:Form:eduBreakList:0:depYear']]]></FYear>
+ 		<TDay><![CDATA[//select[@id='pg:Form:eduBreakList:0:retDay']]]></TDay>
+ 		<TMonth><![CDATA[//select[@id='pg:Form:eduBreakList:0:retMonth']]]></TMonth>
+ 		<TYear><![CDATA[//input[@id='pg:Form:eduBreakList:0:retYear']]]></TYear>
+ 	</EBreak>
+ 	<Occupation>
+ 		<ODescription><![CDATA[//input[@id='pg:Form:occupationChangeList:0:prriorOcc']]]></ODescription>
+ 		<FDay><![CDATA[//select[@id='pg:Form:occupationChangeList:0:depDay']]]></FDay>
+ 		<FMonth><![CDATA[//select[@id='pg:Form:occupationChangeList:0:depMonth']]]></FMonth>
+ 		<FYear><![CDATA[//input[@id='pg:Form:occupationChangeList:0:depYear']]]></FYear>
+ 		<ToDay><![CDATA[//select[@id='pg:Form:occupationChangeList:0:retDay']]]></ToDay>
+ 		<ToMonth><![CDATA[//select[@id='pg:Form:occupationChangeList:0:retMonth']]]></ToMonth>
+ 		<ToYear><![CDATA[//input[@id='pg:Form:occupationChangeList:0:retYear']]]></ToYear>
+ 	</Occupation>
+ 	<AEvents>
+ 	    <AEvent><![CDATA[//input[@id='pg:Form:auspEveList:0:eventDes']]]></AEvent>
+ 	    <ADay><![CDATA[//select[@id='pg:Form:auspEveList:0:mDay']]]></ADay>
+ 	    <AMonth><![CDATA[//select[@id='pg:Form:auspEveList:0:mMonth']]]></AMonth>
+ 	    <AYear><![CDATA[//input[@id='pg:Form:auspEveList:0:mYear']]]></AYear>
+ 	</AEvents>
+ 	<IEvents>
+ 	    <IEvent><![CDATA[//input[@id='pg:Form:inauspEveList:0:eventDes']]]></IEvent>
+ 	    <IDay><![CDATA[//select[@id='pg:Form:inauspEveList:0:dDay']]]></IDay>
+ 	    <IMonth><![CDATA[//select[@id='pg:Form:inauspEveList:0:dMonth']]]></IMonth>
+ 	    <IYear><![CDATA[//input[@id='pg:Form:inauspEveList:0:dYear']]]></IYear>
+ 	</IEvents>
+ 	<OEvents>
+ 	    <OEvent><![CDATA[//input[@id='pg:Form:otherEveList:0:eventDes']]]></OEvent>
+ 	    <ODay><![CDATA[//select[@id='pg:Form:otherEveList:0:dDay']]]></ODay>
+ 	    <OMonth><![CDATA[//select[@id='pg:Form:otherEveList:0:dMonth']]]></OMonth>
+ 	    <OYear><![CDATA[//input[@id='pg:Form:otherEveList:0:dYear']]]></OYear>
+ 	</OEvents>
+ 	
  	<Child>
  		<Relationship><![CDATA[//select[@id='pg:Form:sonDauList:0:eventDes']]]></Relationship>
  		<Day><![CDATA[//select[@id='pg:Form:sonDauList:0:dDay']]]></Day>
@@ -75,17 +132,21 @@
  		<Unit><![CDATA[//select[@id='pg:Form:weightnUnit']]]></Unit>
  		<Weight><![CDATA[//input[@id='pg:Form:weight']]]></Weight>
  	</BodyWeight>
+ 	<TMProgram><![CDATA[//select[@id='pg:Form:TmProg']]]></TMProgram>
  	<DecisionMakingPatterns><![CDATA[//select[@id='pg:Form:decisionMakingPattern']]]></DecisionMakingPatterns>
- 	<Inheritance><![CDATA[//select[@id='pg:Form:Inheritance']]]></Inheritance>
+ 	<Inheritance><![CDATA[//select[@id='pg:Form:InhList:0:Inheritance']]]></Inheritance>
  	<SubmitForm><![CDATA[//input[@id='pg:Form:UploadBtn']]]></SubmitForm>
  	<DoYouAgree><![CDATA[//select[@id='pg:Form:doYouAgree']]]></DoYouAgree>
  	<PersonalPhoto><![CDATA[//input[@id='files']]]></PersonalPhoto>
  	<SaveImgAndPay><![CDATA[//input[@id='pg:frm:SiteTemplate:submitBtn']]]></SaveImgAndPay>
+ 	<UploadImgLater><![CDATA[//input[@id='pg:frm:SiteTemplate:uploadLater']]]></UploadImgLater>
  	<BillingInfo>
  		<BillingPhone><![CDATA[//input[@id='pg:SiteTemplate:frm:billingPhone']]]></BillingPhone>
  		<BillingStreet><![CDATA[//textarea[@id='pg:SiteTemplate:frm:billingStreet']]]></BillingStreet>
  		<BillingCity><![CDATA[//input[@id='pg:SiteTemplate:frm:billingCity']]]></BillingCity>
  		<Postalcode><![CDATA[//input[@id='pg:SiteTemplate:frm:billingPostalCode']]]></Postalcode>
  		<PayByOther><![CDATA[//input[@id='pg:SiteTemplate:frm:submitBtn3']]]></PayByOther>
+ 	
  	</BillingInfo>
+ 	<Update><![CDATA[//input[@id='pg:Form:update']]]></Update>
 </Locators>  

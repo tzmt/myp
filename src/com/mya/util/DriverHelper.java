@@ -152,7 +152,7 @@ public abstract class DriverHelper {
 	//Select iFrame
 	public void SelectiFrame(String value)
 	{
-		getWebDriver().switchTo().frame(getWebDriver().findElement(By.id(value)));
+		getWebDriver().switchTo().frame(getWebDriver().findElement(By.xpath("//*[@title='"+value+"']")));
 	}
 
 }

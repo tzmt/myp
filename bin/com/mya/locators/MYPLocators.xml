@@ -29,9 +29,24 @@
  <ContactBDay><![CDATA[id=pg:form:contactBirthDay]]></ContactBDay>
  <ContactBMonth><![CDATA[id=pg:form:contactBirthMonth]]></ContactBMonth>
  <contactByear><![CDATA[id=pg:form:contactBirthYear]]></contactByear>
+ <ConCountryResidence><![CDATA[//*[@id='pg:form:concountryOfResidence']]]></ConCountryResidence>
+ <ContactRelation><![CDATA[//*[@id='pg:form:departedRelation']]]></ContactRelation>
  <BillingTitle><![CDATA[id=pg:SiteTemplate:frm:billingTitle]]></BillingTitle>
  <JapanMemberStatus><![CDATA[id=pg:form:memberStatus]]></JapanMemberStatus>
  <State><![CDATA[id=pg:form:state]]></State>
  <YMailLogin><![CDATA[id=login]]></YMailLogin>
  <CheckYMail><![CDATA[//input[@class='sbut']]]></CheckYMail>
+ <ContactDepartedTitle><![CDATA[//*[@id='pg:form:departedContactTitle']]]></ContactDepartedTitle>
+ <ContactDepartedFName><![CDATA[//*[@id='pg:form:departedContactFirstName']]]></ContactDepartedFName>
+ <ContactDepartedLName><![CDATA[//*[@id='pg:form:departedContactLastName']]]></ContactDepartedLName>
+ <ContactDepartedBDay><![CDATA[id=pg:form:departedContactBirthDay]]></ContactDepartedBDay>
+ <ContactDepartedBMonth><![CDATA[id=pg:form:departedContactBirthMonth]]></ContactDepartedBMonth>
+ <ContactDepartedByear><![CDATA[id=pg:form:departedContactBirthYear]]></ContactDepartedByear>
+ <EnterContactDepartedEmail><![CDATA[//*[@id='pg:form:departedContactEmail']]]></EnterContactDepartedEmail>
+ <EnterContactDepartedPhone><![CDATA[//*[@id='pg:form:departedContactPhone']]]></EnterContactDepartedPhone>
+ <DepartedTitle><![CDATA[//*[@id='pg:form:departedATitle']]]></DepartedTitle>
+ <DepartedFName><![CDATA[//*[@id='pg:form:departedAFNameId']]]></DepartedFName>
+ <DepartedLName><![CDATA[//*[@id='pg:form:departedALNameId']]]></DepartedLName>
+ <DepartedResidence><![CDATA[//*[@id='pg:form:departedCountryofResidence']]]></DepartedResidence>
+ <Consent><![CDATA[//*[@id='pg:form:consentAP']]]></Consent>
 </Locators>  

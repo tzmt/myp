@@ -18,6 +18,7 @@ import org.testng.annotations.BeforeSuite;
 import com.mya.pagehelper.ACBTApplicationHelper;
 import com.mya.pagehelper.ADCBCApplicationHelper;
 import com.mya.pagehelper.CBCApplicationHelper;
+import com.mya.pagehelper.MUHApplicationHelper;
 import com.mya.pagehelper.MYPApplicationHelper;
 import com.mya.pagehelper.SFDCHelper;
 import com.mya.pagehelper.SignupHelper;
@@ -35,6 +36,7 @@ public abstract class DriverTestCase
 	protected SFDCHelper sfdchelper;
 	protected ADCBCApplicationHelper adcbchelper;
 	protected ACBTApplicationHelper acbthelper;
+	protected MUHApplicationHelper muhhelper;
 
 
 	//Initialize objects
@@ -42,9 +44,36 @@ public abstract class DriverTestCase
 
 	//Define variables
 	protected String MYP_app_url = propertyReader.readApplicationFile("URL");
+	protected String MYP_app_url_cmp= propertyReader.readApplicationFile("MYP_URL_CMP");
+	protected String MYP_app_url_Indvaccnt= propertyReader.readApplicationFile("MYP_URL_Indvaccnt");
+	protected String MYP_app_url_Orgaccnt= propertyReader.readApplicationFile("MYP_URL_Orgaccnt");
+	protected String MYAD_app_url = propertyReader.readApplicationFile("MYAD_URL");
 	protected String CBC_app_url = propertyReader.readApplicationFile("CBC_URL");
+	protected String CBC_app_url_Indvaccnt = propertyReader.readApplicationFile("CBC_URL_Indvaccnt");
+	protected String CBC_app_url_Orgaccnt = propertyReader.readApplicationFile("CBC_URL_Orgaccnt");
+	protected String CBC_app_url_CMP = propertyReader.readApplicationFile("CBC_URL_CMP");
+	protected String CBC_app_url_CMPOverride = propertyReader.readApplicationFile("CBC_URL_Cmpoverride");
+	protected String CBC_app_url_PMTH = propertyReader.readApplicationFile("CBC_URL_PMTH");
+	protected String CBC_app_url_Override = propertyReader.readApplicationFile("CBC_URL_Override");
+	protected String CBC_app_url_Upgrade = propertyReader.readApplicationFile("CBC_URL_Upgrade");
+	protected String CBC_app_url_DepartedC= propertyReader.readApplicationFile("CBC_URL_DepartedC");
+	protected String ADCBC_app_url_Orgaccnt = propertyReader.readApplicationFile("ADCBC_URL_Orgaccnt");
+	protected String ADCBC_app_url_Indvaccnt = propertyReader.readApplicationFile("ADCBC_URL_Individualaccnt");
 	protected String ADCBC_app_url = propertyReader.readApplicationFile("ADCBC_URL");
+	protected String ADCBC_app_url_cmp = propertyReader.readApplicationFile("ADCBC_URL_CMP");
+	protected String ADCBC_app_url_override = propertyReader.readApplicationFile("ADCBC_URL_Override");
+	protected String ADCBC_app_url_pmth = propertyReader.readApplicationFile("ADCBC_URL_PMTH");
 	protected String ACBT_app_url = propertyReader.readApplicationFile("ACBT_URL");
+	protected String ACBT_app_url_CMP = propertyReader.readApplicationFile("ACBT_URL_CMP");
+	protected String ACBT_app_url_Override = propertyReader.readApplicationFile("ACBT_URL_Override");
+	protected String ACBT_app_url_Indvaccnt = propertyReader.readApplicationFile("ACBT_URL_Individualaccnt");
+	protected String ACBT_app_url_PMTH = propertyReader.readApplicationFile("ACBT_URL_PMTH");
+	protected String MUH_app_url = propertyReader.readApplicationFile("MUH_URL");
+	protected String MUH_app_url_CMP = propertyReader.readApplicationFile("MUH_URL_CMP");
+	protected String MUH_app_url_Override = propertyReader.readApplicationFile("MUH_URL_Override");
+	protected String MUH_app_url_PMTH = propertyReader.readApplicationFile("MUH_URL_PMTH");
+	protected String MUH_app_url_Indvaccnt = propertyReader.readApplicationFile("MUH_URL_Individualaccnt");
+	protected String MUH_app_url_Orgaccnt = propertyReader.readApplicationFile("MUH_URL_Orgaccnt");
 	protected String sfdc_url = propertyReader.readApplicationFile("SFDC_Testing_URL");
 	protected String username = propertyReader.readApplicationFile("username");
 	protected String password = propertyReader.readApplicationFile("pswd");
@@ -94,7 +123,7 @@ public abstract class DriverTestCase
 	@AfterSuite
 	public void afterMainMethod() 
 	{  
-		//driver.quit();
+		driver.quit();
 	}
 
 	public WebDriver getWebDriver()

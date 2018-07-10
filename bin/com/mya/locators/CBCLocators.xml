@@ -65,7 +65,7 @@
  	     <ExpirationDateMonth><![CDATA[//select[@id='monthID']]]></ExpirationDateMonth>
  	     <ExpirationDateYear><![CDATA[//select[@id='yearID']]]></ExpirationDateYear>
  	     <CardSecurityCode><![CDATA[//input[@id='cardCodeID']]]></CardSecurityCode>
- 	     <Pay><![CDATA[//span[@id='pg:SiteTemplate:j_id81']/span[2]/span/button[2]]]></Pay>
+ 	     <Pay><![CDATA[css=button.paySaveButton]]></Pay>
  	     <Cancel><![CDATA[//span[@id='pg:SiteTemplate:j_id81']/span[2]/span/button[1]]]></Cancel>
  	</CheckOut>
  	<Consent><![CDATA[//*[@id='pg:frm:consentAP']]]></Consent>

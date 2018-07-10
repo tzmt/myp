@@ -115,6 +115,12 @@ public class CaptureCBCPayment extends DriverTestCase
 			//Wait for step 2 page to load 
 			cbchelpers.waitForWorkAroundTime(6000);
 			
+			//Click on Update button
+			cbchelpers.ClickItem("Update");
+			
+			//Wait for step 2 page to load 
+			cbchelpers.waitForWorkAroundTime(3000);
+			
 			//Validate Billing information page
 			adcbchelper.ValidateBillingPage();
 			
@@ -151,7 +157,6 @@ public class CaptureCBCPayment extends DriverTestCase
 			//Submit the payment
 			cbchelpers.ClickItem("CheckOut.Pay");
 			
-			
 			//Wait for workaround time
 			cbchelpers.waitForWorkAroundTime(10000);
 				
@@ -161,8 +166,8 @@ public class CaptureCBCPayment extends DriverTestCase
 			//Wait For Home page load
 			sfdchelper.waitForWorkAroundTime(5000);
 			
-			//Select iFrame on with classic theme
-			sfdchelper.SelectiFrame("066o0000002HNjw");
+			//Select iFrame
+			sfdchelper.SelectiFrame("MJYUnbilledApplications");
 			
 			//Click on Newly Added Account name
 			sfdchelper.clickOn("link=Aman "+lastname);

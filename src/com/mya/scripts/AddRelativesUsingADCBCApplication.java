@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.mya.pagehelper.ADCBCApplicationHelper;
 import com.mya.pagehelper.CBCApplicationHelper;
+import com.mya.pagehelper.MYPApplicationHelper;
 import com.mya.pagehelper.SFDCHelper;
 import com.mya.util.DriverTestCase;
 import com.mya.util.ExecutionLog;
@@ -21,6 +22,7 @@ public class AddRelativesUsingADCBCApplication extends DriverTestCase
 		cbchelpers = new CBCApplicationHelper(getWebDriver());
 		sfdchelper = new SFDCHelper(getWebDriver());
 		adcbchelper = new ADCBCApplicationHelper(getWebDriver());
+		myphelpers = new MYPApplicationHelper(getWebDriver());
 
 		//variables
 		String lastname = "Khan" +getRandomInteger(1, 9999);
@@ -106,16 +108,19 @@ public class AddRelativesUsingADCBCApplication extends DriverTestCase
 			cbchelpers.ClickItem("SubmitAndProceedToStep2");
 			
 			//Wait for step 2 page to load 
-			cbchelpers.waitForWorkAroundTime(3000);
-			
-			//Confirm third party consent
-			myphelpers.SelectConsent("Yes");
+			cbchelpers.waitForWorkAroundTime(5000);
 			
 			//Submit the application now 
 			cbchelpers.ClickItem("SubmitAndProceedToStep2");
 			
 			//Wait for step 2 page to load 
 			cbchelpers.waitForWorkAroundTime(6000);
+			
+			//Click on Update button
+			cbchelpers.ClickItem("Update");
+			
+			//Wait for step 2 page to load 
+			cbchelpers.waitForWorkAroundTime(3000);
 			
 			//Validate Billing information page
 			adcbchelper.ValidateBillingPage();
@@ -132,6 +137,9 @@ public class AddRelativesUsingADCBCApplication extends DriverTestCase
 			//Fill in postal code
 			cbchelpers.FillinData("BillingInfo.Postalcode", "201301");
 			
+			//Select privacy policy check box
+			cbchelpers.ClickItem("BillingInfo.PrivacyPolicy");
+			
 			//Pay by other options
 			cbchelpers.ClickItem("BillingInfo.PayByOther");
 			
@@ -144,8 +152,8 @@ public class AddRelativesUsingADCBCApplication extends DriverTestCase
 			//Wait For Home page load
 			sfdchelper.waitForWorkAroundTime(6000);
 			
-			//Select iFrame
-			//sfdchelper.SelectiFrame("066o0000002HNjw");
+			//Select iFrame on with classic theme
+			sfdchelper.SelectiFrame("MJYUnbilledApplications");
 			
 			//Click on Newly Added Account name
 			sfdchelper.clickOn("link=Aman "+lastname);
@@ -228,13 +236,13 @@ public class AddRelativesUsingADCBCApplication extends DriverTestCase
 			cbchelpers.waitForWorkAroundTime(4000);
 			
 			//Now got to SFDC
-			getWebDriver().navigate().to(sfdc_url);
+			sfdchelper.LoginIntoSFDC(sfdc_url, username, password);
 			
 			//Wait For Home page load
-			sfdchelper.waitForWorkAroundTime(6000);
+			sfdchelper.waitForWorkAroundTime(5000);
 			
 			//Select iFrame
-			sfdchelper.SelectiFrame("066o0000002HNjw");
+			sfdchelper.SelectiFrame("MJYUnbilledApplications");
 			
 			//Click on Newly Added Account name
 			sfdchelper.clickOn("link=Aman "+lastname);

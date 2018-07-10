@@ -14,7 +14,6 @@ import com.mya.util.DriverTestCase;
 import com.mya.util.ExecutionLog;
 import com.sun.mail.handlers.text_xml;
 
-import junit.framework.Assert;
 
 public class SubmitADCBCApplicationAsOrgAccntCode extends DriverTestCase
 {	

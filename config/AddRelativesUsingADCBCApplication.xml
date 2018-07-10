@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="Test Add Relatives Using ADCBC Application"
+	annotations="JDK">
+	<test name="AddRelativesUsingADCBCApplication" junit="false"
+		preserve-order="true">
+		<classes>
+			<class name="com.mya.scripts.AddRelativesUsingADCBCApplication"/>			
+		</classes>		
+	</test>
+</suite> 

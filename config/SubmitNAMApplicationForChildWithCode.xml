@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="Test Submit NAM Application For Child With Code"
+	annotations="JDK">
+	<test name="SubmitNAMApplicationForChildWithCode" junit="false"
+		preserve-order="true">
+		<classes>
+			<class name="com.mya.scripts.SubmitNAMApplicationForChildWithCode"/>			
+		</classes>		
+	</test>
+</suite> 

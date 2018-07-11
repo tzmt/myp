@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="User Submit CBC Application As Complementry"
+	annotations="JDK">
+	<test name="SubmitCBCApplicationAsComplementry" junit="false"
+		preserve-order="true">
+		<classes>
+			<class name="com.mya.scripts.SubmitCBCApplicationAsComplementry"/>			
+		</classes>		
+	</test>
+</suite> 

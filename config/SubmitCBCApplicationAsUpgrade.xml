@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="User Submit CBC Application As Upgrade"
+	annotations="JDK">
+	<test name="SubmitCBCApplicationAsUpgrade" junit="false"
+		preserve-order="true">
+		<classes>
+			<class name="com.mya.scripts.SubmitCBCApplicationAsUpgrade"/>			
+		</classes>		
+	</test>
+</suite> 

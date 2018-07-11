@@ -18,6 +18,7 @@ import org.testng.annotations.BeforeSuite;
 import com.mya.pagehelper.ACBTApplicationHelper;
 import com.mya.pagehelper.ADCBCApplicationHelper;
 import com.mya.pagehelper.CBCApplicationHelper;
+import com.mya.pagehelper.COMApplicationHelper;
 import com.mya.pagehelper.MUHApplicationHelper;
 import com.mya.pagehelper.MYPApplicationHelper;
 import com.mya.pagehelper.NAMApplicationHelper;
@@ -39,6 +40,7 @@ public abstract class DriverTestCase
 	protected ACBTApplicationHelper acbthelper;
 	protected MUHApplicationHelper muhhelper;
 	protected NAMApplicationHelper namhelper;
+	protected COMApplicationHelper comhelper;
 
 	//Initialize objects
 	protected PropertyReader propertyReader = new PropertyReader();
@@ -80,6 +82,12 @@ public abstract class DriverTestCase
 	protected String NAM_app_url_Override=propertyReader.readApplicationFile("NAM_URL_Override");
 	protected String NAM_app_url_PMTH=propertyReader.readApplicationFile("NAM_URL_PMTH");
 	protected String NAM_app_url_Childaccnt=propertyReader.readApplicationFile("NAM_URL_Childaccnt");
+	protected String COM_app_url=propertyReader.readApplicationFile("COM_URL");
+	protected String COM_app_url_CMP=propertyReader.readApplicationFile("COM_URL_CMP");
+	protected String COM_app_url_Override=propertyReader.readApplicationFile("COM_URL_Override");
+	protected String COM_app_url_PMTH=propertyReader.readApplicationFile("COM_URL_PMTH");
+	protected String COM_app_url_Indvaccnt=propertyReader.readApplicationFile("COM_URL_Indvaccnt");
+	protected String COM_app_url_Orgaccnt=propertyReader.readApplicationFile("COM_URL_Orgaccnt");
 	protected String sfdc_url = propertyReader.readApplicationFile("SFDC_Testing_URL");
 	protected String username = propertyReader.readApplicationFile("username");
 	protected String password = propertyReader.readApplicationFile("pswd");

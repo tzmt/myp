@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="User Submit CBC Application"
+	annotations="JDK">
+	<test name="SubmitCBCApplication" junit="false"
+		preserve-order="true">
+		<classes>
+			<class name="com.mya.scripts.SubmitCBCApplication"/>			
+		</classes>		
+	</test>
+</suite> 

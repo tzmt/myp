@@ -214,7 +214,7 @@ public class ACBTApplicationHelper extends DriverHelper {
 	{
 		String locator = acbtlocator.getLocator(xmlnode);
 		selectDropDown(locator, value);
-		//waitForWorkAroundTime(3000);
+		waitForWorkAroundTime(100);
 	}
 
 	//click Xml node

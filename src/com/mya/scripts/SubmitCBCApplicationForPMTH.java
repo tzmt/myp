@@ -69,6 +69,7 @@ public class SubmitCBCApplicationForPMTH extends DriverTestCase
 			
 			//Fill in birth location Country 
 			cbchelpers.SelectListItem("YourBirthLocation.Country", "India");
+			cbchelpers.waitForWorkAroundTime(3000);
 			
 			//Fill in birth location State
 			cbchelpers.FillinData("YourBirthLocation.ApplicantsBirthState", "UP");
@@ -127,7 +128,7 @@ public class SubmitCBCApplicationForPMTH extends DriverTestCase
 			sfdchelper.ClickItem("Submit");
 			
 			//Wait For Home page load
-			sfdchelper.waitForWorkAroundTime(300);
+			sfdchelper.waitForWorkAroundTime(3000);
 			
 			//Verify Payment detail
 			sfdchelper.VerifyPaymenPage("Payment Detail");

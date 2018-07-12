@@ -68,6 +68,7 @@ public class SubmitCBCApplicationWithOrgAccntCode extends DriverTestCase
 			
 			//Fill in birth location Country 
 			cbchelpers.SelectListItem("YourBirthLocation.Country", "India");
+			cbchelpers.waitForWorkAroundTime(3000);
 			
 			//Fill in birth location State
 			cbchelpers.FillinData("YourBirthLocation.ApplicantsBirthState", "UP");

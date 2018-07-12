@@ -235,7 +235,7 @@ public class SubmitACBTApplicationForPMTH extends DriverTestCase
 			sfdchelper.ClickItem("Submit");
 			
 			//Wait For Home page load
-			sfdchelper.waitForWorkAroundTime(300);
+			sfdchelper.waitForWorkAroundTime(3000);
 			
 			//Verify Payment detail
 			sfdchelper.VerifyPaymenPage("Payment Detail");

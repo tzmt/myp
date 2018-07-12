@@ -16,6 +16,7 @@
 	     <suite-file path="SubmitACBTApplicationForIndividual.xml"></suite-file>
 	     <suite-file path="SubmitACBTApplicationForOverride.xml"></suite-file>
 	     <suite-file path="SubmitACBTApplicationForPMTH.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplication.xml"></suite-file>
 	     <suite-file path="SubmitNAMApplicationForChild.xml"></suite-file>
 	     <suite-file path="SubmitNAMApplicationForOrg.xml"></suite-file>
 	     <suite-file path="SubmitNAMApplicationForChildWithCode.xml"></suite-file>

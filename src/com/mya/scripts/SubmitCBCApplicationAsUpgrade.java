@@ -32,7 +32,7 @@ public class SubmitCBCApplicationAsUpgrade extends DriverTestCase
 			System.out.println("Testing Application URL:");
 			getWebDriver().navigate().to(CBC_app_url);
 			
-			//Change the parameter to complementry
+			//Change the parameter to complementary
 			System.out.println("Testing Application URL:");
 			getWebDriver().navigate().to(CBC_app_url_Upgrade);
 			
@@ -66,6 +66,7 @@ public class SubmitCBCApplicationAsUpgrade extends DriverTestCase
 			
 			//Fill in birth location Country 
 			cbchelpers.SelectListItem("YourBirthLocation.Country", "India");
+			cbchelpers.waitForWorkAroundTime(3000);
 			
 			//Fill in birth location State
 			cbchelpers.FillinData("YourBirthLocation.ApplicantsBirthState", "UP");

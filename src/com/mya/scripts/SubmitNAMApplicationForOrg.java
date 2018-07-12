@@ -62,7 +62,7 @@ public class SubmitNAMApplicationForOrg extends DriverTestCase
 			
 			//Fill in Organization Foundation details
 			namhelper.SelectListItem("OrgInfo.FCountry", "India");
-			namhelper.waitForWorkAroundTime(2000);
+			namhelper.waitForWorkAroundTime(3000);
 			
 			//Fill in birth location State
 			namhelper.FillinData("OrgInfo.FState", "UP");

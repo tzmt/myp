@@ -66,7 +66,7 @@ public class SubmitNAMApplicationForOverride extends DriverTestCase
 			
 			//Fill in birth location Country 
 			namhelper.SelectListItem("ChildBirthLoc.Country", "India");
-			namhelper.waitForWorkAroundTime(2000);
+			namhelper.waitForWorkAroundTime(4000);
 			
 			//Fill in birth location State
 			namhelper.FillinData("ChildBirthLoc.ChildBirthState", "UP");

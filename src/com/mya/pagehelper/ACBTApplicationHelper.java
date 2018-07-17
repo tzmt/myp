@@ -65,26 +65,49 @@ public class ACBTApplicationHelper extends DriverHelper {
 		sendKeys(locator, phone);
 	}
 
-	//Select Applicant's birth day
+	//Select Applicant's From birth day
 	public void ApplicantBDay(String BDay)
 	{
-		String locator = acbtlocator.getLocator("YourBirthDetails.ApplicantsBirthDay");
+		String locator = acbtlocator.getLocator("YourBirthDetails.FromBirthDay");
 		selectDropDown(locator, BDay);
 		waitForWorkAroundTime(300);
 	}
 
-	//Select Applicant's Birth month
+	//Select Applicant's From Birth month
 	public void ApplicantBMonth(String BMonth)
 	{
-		String locator = acbtlocator.getLocator("YourBirthDetails.ApplicantsBirthMonth");
+		String locator = acbtlocator.getLocator("YourBirthDetails.FromBirthMonth");
 		selectDropDown(locator, BMonth);
 		waitForWorkAroundTime(300);
 	}
 
-	//Select Applican't birth year
+	//Select Applican't From birth year
 	public void ApplicantBYear(String year)
 	{
-		String locator = acbtlocator.getLocator("YourBirthDetails.ApplicantsBirthYear");
+		String locator = acbtlocator.getLocator("YourBirthDetails.FromBirthYear");
+		sendKeys(locator, year);
+	}
+	
+	//Select Applicant's T0 birth day
+	public void ApplicantToBDay(String BDay)
+	{
+		String locator = acbtlocator.getLocator("YourBirthDetails.ToBirthDay");
+		selectDropDown(locator, BDay);
+		waitForWorkAroundTime(300);
+	}
+
+	//Select Applicant's To Birth month
+	public void ApplicantToBMonth(String BMonth)
+	{
+		String locator = acbtlocator.getLocator("YourBirthDetails.ToBirthMonth");
+		selectDropDown(locator, BMonth);
+		waitForWorkAroundTime(300);
+	}
+
+	//Select Applican't To birth year
+	public void ApplicantToBYear(String year)
+	{
+		String locator = acbtlocator.getLocator("YourBirthDetails.ToBirthYear");
 		sendKeys(locator, year);
 	}
 

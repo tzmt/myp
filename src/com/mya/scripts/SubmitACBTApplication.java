@@ -62,29 +62,22 @@ public class SubmitACBTApplication extends DriverTestCase
 			//Fill in birth location City
 			acbthelper.FillinData("YourBirthLocation.ApplicantsBirthCity", "Noida");
 			
-			//Select Applicant's birth day
+			//Select Applicant's From birth details
 			acbthelper.ApplicantBDay("1");
-			
-			//Select Applicant's Birth month
 			acbthelper.ApplicantBMonth("July");
-			
-			//Select Applican't birth year
 			acbthelper.ApplicantBYear("1988");
+			acbthelper.SelectListItem("YourBirthDetails.FromBirthHour", "01");
+			acbthelper.SelectListItem("YourBirthDetails.FromBirthMin", "04");
 			
-			//Select Birth time hour
-			acbthelper.SelectListItem("YourBirthDetails.ApplicantBirthHour", "5");
-			
-			//Select Birth time minutes
-			acbthelper.SelectListItem("YourBirthDetails.ApplicantBirthMin", "5");
-			
-			//Select Birth time seconds
-			acbthelper.SelectListItem("YourBirthDetails.ApplicantBirthSeconds", "5");
+			//Select Applicant's To birth details
+			acbthelper.ApplicantToBDay("1");
+			acbthelper.ApplicantToBMonth("July");
+			acbthelper.ApplicantToBYear("1988");
+			acbthelper.SelectListItem("YourBirthDetails.ToBirthHour", "02");
+			acbthelper.SelectListItem("YourBirthDetails.ToBirthMin", "02");
 			
 			//Select if yes/no/Unsure for Day light saving 
 			acbthelper.SelectListItem("YourBirthDetails.DaylightSavingsTime", "No");
-			
-			//Select Accuracy of the time
-			acbthelper.SelectListItem("YourBirthDetails.Accuracy", "Within 1 second before or after the above time");
 			
 		   //Select location where born
 			acbthelper.SelectListItem("YourBirthDetails.WhereBorn", "Home");
@@ -92,6 +85,12 @@ public class SubmitACBTApplication extends DriverTestCase
 			
 			//Where were you born
 			acbthelper.SelectListItem("YourBirthDetails.Gender", "Male");
+			
+			//Fill Birth Time details
+			acbthelper.SelectListItem("BirthTime.BSource", "Government/Municipality");
+			acbthelper.SelectListItem("BirthTime.BHour", "01");
+			acbthelper.SelectListItem("BirthTime.BMinute", "03");
+			acbthelper.SelectListItem("BirthTime.BAccuracy", "Within 5 minutes before or after this time");
 			
 			//Fill in Health issue 1
 			acbthelper.FillinData("HealthIssues.Issue", "Test health issue");
@@ -198,7 +197,7 @@ public class SubmitACBTApplication extends DriverTestCase
 			
 			//select Body height unit and height 
 			acbthelper.SelectListItem("BodyHeight.Unit", "Centimeters");
-			acbthelper.waitForWorkAroundTime(4000);
+			acbthelper.waitForWorkAroundTime(5000);
 			acbthelper.FillinData("BodyHeight.Height", "175");
 			
 			//select body weight unit and weight 
@@ -208,6 +207,15 @@ public class SubmitACBTApplication extends DriverTestCase
 			
 			//Select type of decisions making
 			acbthelper.SelectListItem("DecisionMakingPatterns", "I make quick decisions but also change them quickly");
+			
+			//Fill in Relationships field.
+			acbthelper.SelectListItem("Relationships.Father", "Good");
+			acbthelper.SelectListItem("Relationships.Mother", "Very Good");
+			acbthelper.SelectListItem("Relationships.Spouse", "Not Good");
+			acbthelper.SelectListItem("Relationships.Friends", "Not Applicable");
+			acbthelper.SelectListItem("Relationships.Child1", "Good");
+			acbthelper.SelectListItem("Relationships.ESibling1", "Good");
+			acbthelper.SelectListItem("Relationships.YSibling1", "Not Sure");
 			
 			//select DoYouAgree
 			acbthelper.SelectListItem("DoYouAgree", "Yes, I agree to the conditions.");

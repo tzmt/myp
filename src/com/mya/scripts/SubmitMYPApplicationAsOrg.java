@@ -12,7 +12,7 @@ import com.mya.pagehelper.SignupHelper;
 import com.mya.util.DriverTestCase;
 import com.mya.util.ExecutionLog;
 
-public class SubmitMJPApplicationFromJapan extends DriverTestCase
+public class SubmitMYPApplicationAsOrg extends DriverTestCase
 {	
 	@Test
 	public void testMYPApplication() throws Exception
@@ -32,23 +32,27 @@ public class SubmitMJPApplicationFromJapan extends DriverTestCase
 			getWebDriver().navigate().to(MYP_app_url);
 			
 			//Select Applicant type
-			myphelpers.SelectApplicant("Individual");
+			myphelpers.SelectApplicant("Organization");
 			
-			//Enter Title
-			myphelpers.sendKeys("//*[@id='pg:form:applicantTitle']", "Mr.");
-			
-			//Enter First name and Last name
-			myphelpers.sendKeys("//*[@id='pg:form:AFNameId']", "Aman");
-			myphelpers.sendKeys("//*[@id='pg:form:ALNameId']", lastname);
+			//Enter Org name
+			myphelpers.FillinData("Orgname", "Testing Org");
 			
 			//Select Country
-			myphelpers.SelectCountry("Japan");
+			myphelpers.SelectCountry("India");
 			
-			//Wait for page to be updated 
-			myphelpers.waitForWorkAroundTime(5000);
+			//Enter Contact Title
+			myphelpers.FillinData("ContactTitle", "Mr.");
 			
-			//Select Member status
-			myphelpers.SelectMemberStatus("Japanese Member");
+		    //Enter Contact First Name
+			myphelpers.FillinData("ContactFName", "Aman");
+			
+			//Enter Contact Last name
+			myphelpers.FillinData("ContactLname", lastname);
+			
+			//Select Contact Birth Date
+			myphelpers.ContactBDayDetails("ContactBDay", "1");
+			myphelpers.ContactBDayDetails("ContactBMonth", "July");
+			myphelpers.FillinData("contactByear", "1988");
 			
 			//Enter contact's email address
 			myphelpers.EnterContactEmail(lastname+"@yopmail.com");
@@ -103,6 +107,9 @@ public class SubmitMJPApplicationFromJapan extends DriverTestCase
 			
 			//validate Billing information page displayed.
 			myphelpers.VerifyBillingInfoPage();
+			
+			//Fill in Billing title
+			myphelpers.FillinData("BillingTitle", "Mr.");
 			
 			//Enter billing phone number
 			myphelpers.EnterBillingPhone("8860544110");

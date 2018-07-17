@@ -20,8 +20,11 @@ import com.mya.pagehelper.ADCBCApplicationHelper;
 import com.mya.pagehelper.CBCApplicationHelper;
 import com.mya.pagehelper.COMApplicationHelper;
 import com.mya.pagehelper.DONApplicationHelper;
+import com.mya.pagehelper.MJCApplicationHelper;
 import com.mya.pagehelper.MUHApplicationHelper;
 import com.mya.pagehelper.MYPApplicationHelper;
+import com.mya.pagehelper.MYRCApplicationHelper;
+import com.mya.pagehelper.MYRDApplicationHelper;
 import com.mya.pagehelper.NAMApplicationHelper;
 import com.mya.pagehelper.SFDCHelper;
 import com.mya.pagehelper.SignupHelper;
@@ -43,6 +46,9 @@ public abstract class DriverTestCase
 	protected NAMApplicationHelper namhelper;
 	protected COMApplicationHelper comhelper;
 	protected DONApplicationHelper donhelper;
+	protected MJCApplicationHelper mjchelper;
+	protected MYRCApplicationHelper myrchelper;
+	protected MYRDApplicationHelper myrdhelper;
 
 	//Initialize objects
 	protected PropertyReader propertyReader = new PropertyReader();
@@ -94,6 +100,24 @@ public abstract class DriverTestCase
 	protected String DON_app_url_CMP=propertyReader.readApplicationFile("DON_URL_CMP");
 	protected String DON_app_url_PMTH=propertyReader.readApplicationFile("DON_URL_PMTH");
 	protected String DON_app_url_Override=propertyReader.readApplicationFile("DON_URL_Override");
+	protected String DON_app_url_Indvaccnt=propertyReader.readApplicationFile("DON_URL_Indvaccnt");
+	protected String DON_app_url_Orgaccnt=propertyReader.readApplicationFile("DON_URL_Orgaccnt");
+	protected String MJC_app_url=propertyReader.readApplicationFile("MJC_URL");
+	protected String MJC_app_url_Indvaccnt=propertyReader.readApplicationFile("MJC_URL_Indvaccnt");
+	protected String MJC_app_url_Orgaccnt=propertyReader.readApplicationFile("MJC_URL_Orgaccnt");
+	protected String MJC_app_url_CMP=propertyReader.readApplicationFile("MJC_URL_CMP");
+	protected String MJC_app_url_PMTH=propertyReader.readApplicationFile("MJC_URL_PMTH");
+	protected String MJC_app_url_Override=propertyReader.readApplicationFile("MJC_URL_Override");
+	protected String MYRC_app_url=propertyReader.readApplicationFile("MYRC_URL");
+	protected String MYRC_app_url_Indvaccnt=propertyReader.readApplicationFile("MYRC_URL_Indvaccnt");
+	protected String MYRC_app_url_Orgaccnt=propertyReader.readApplicationFile("MYRC_URL_Orgaccnt");
+	protected String MYRC_app_url_CMP=propertyReader.readApplicationFile("MYRC_URL_CMP");
+	protected String MYRC_app_url_Override=propertyReader.readApplicationFile("MYRC_URL_Override");
+	protected String MYRC_app_url_PMTH=propertyReader.readApplicationFile("MYRC_URL_PMTH");
+	protected String MYRD_app_url=propertyReader.readApplicationFile("MYRD_URL");
+	protected String MYRD_app_url_Indvaccnt=propertyReader.readApplicationFile("MYRD_URL_Indvaccnt");
+	protected String MYRD_app_url_Override=propertyReader.readApplicationFile("MYRD_URL_Override");
+	protected String MYRD_app_url_PMTH=propertyReader.readApplicationFile("MYRD_URL_PMTH");
 	protected String sfdc_url = propertyReader.readApplicationFile("SFDC_Testing_URL");
 	protected String username = propertyReader.readApplicationFile("username");
 	protected String password = propertyReader.readApplicationFile("pswd");

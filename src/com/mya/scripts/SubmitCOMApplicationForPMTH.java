@@ -102,23 +102,17 @@ public class SubmitCOMApplicationForPMTH extends DriverTestCase
 			comhelper.ClickItem("Update");
 			comhelper.waitForWorkAroundTime(7000);
 					
-			//Now got to SFDC
-			sfdchelper.LoginIntoSFDC(sfdc_url, username, password);
+			//Login to to SFDC
+			sfdchelper.sendKeys("//*[@id='username']","aman@bsyf.org.testing" );
+			sfdchelper.sendKeys("//*[@id='password']", "2wsx@WSX1qaz%");
+			sfdchelper.ClickItem("Submit");
 			
 			//Wait For Home page load
-			sfdchelper.waitForWorkAroundTime(6000);
+			sfdchelper.waitForWorkAroundTime(3000);
 			
-			//Select iFrame on with classic theme
-			sfdchelper.SelectiFrame("MJYUnbilledApplications");
-			
-			//Click on Newly Added Account name
-			sfdchelper.clickOn("link=Aman "+lastname);
-			
-			//Wait for element using xml node
-			sfdchelper.WaitForItem("AccountDetails.AccountTitle", 40);
-			
-			//Verify Account Details page
-			sfdchelper.VerifySFDCPageTitle("Account Detail");
+			//Verify Payment detail
+			sfdchelper.VerifyPaymenPage("Payment Detail");
+			System.out.println("Redirected on Payment Page");
 			
 
 		}

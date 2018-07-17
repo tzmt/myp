@@ -16,18 +16,27 @@
  	</YourBirthLocation>
  	<YourBirthDetails>
  		<Gender><![CDATA[//select[@id='pg:Form:applicantsGender']]]></Gender>
- 		<ApplicantsBirthDay><![CDATA[//select[@id='pg:Form:applicantsBirthDay']]]></ApplicantsBirthDay>
- 		<ApplicantsBirthMonth><![CDATA[//select[@id='pg:Form:applicantsBirthMonth']]]></ApplicantsBirthMonth>
- 		<ApplicantsBirthYear><![CDATA[//input[@id='pg:Form:applicantsBirthYear']]]></ApplicantsBirthYear>
- 		<ApplicantBirthHour><![CDATA[//select[@id='pg:Form:btHours']]]></ApplicantBirthHour>
- 		<ApplicantBirthMin><![CDATA[//select[@id='pg:Form:btMinutes']]]></ApplicantBirthMin>
- 		<ApplicantBirthSeconds><![CDATA[//select[@id='pg:Form:btSeconds']]]></ApplicantBirthSeconds>
- 		<Accuracy><![CDATA[//select[@id='pg:Form:sourceAccuracy']]]></Accuracy>
+ 		<FromBirthDay><![CDATA[//select[@id='pg:Form:fromBirthDay']]]></FromBirthDay>
+ 		<FromBirthMonth><![CDATA[//select[@id='pg:Form:fromBirthMonth']]]></FromBirthMonth>
+ 		<FromBirthYear><![CDATA[//input[@id='pg:Form:fromBirthYear']]]></FromBirthYear>
+ 		<FromBirthHour><![CDATA[//select[@id='pg:Form:fromBirthHours']]]></FromBirthHour>
+ 		<FromBirthMin><![CDATA[//select[@id='pg:Form:fromBirthMinutes']]]></FromBirthMin>
+ 		<ToBirthDay><![CDATA[//select[@id='pg:Form:toBirthDay']]]></ToBirthDay>
+ 		<ToBirthMonth><![CDATA[//select[@id='pg:Form:toBirthMonth']]]></ToBirthMonth>
+ 		<ToBirthYear><![CDATA[//input[@id='pg:Form:toBirthYear']]]></ToBirthYear>
+ 		<ToBirthHour><![CDATA[//select[@id='pg:Form:toBirthHours']]]></ToBirthHour>
+ 		<ToBirthMin><![CDATA[//select[@id='pg:Form:toBirthMinutes']]]></ToBirthMin>
  		<BirthTimeSource><![CDATA[//select[@id='pg:Form:birthtimesource']]]></BirthTimeSource>
  		<WhereBorn><![CDATA[//select[@id='pg:Form:whereBorn']]]></WhereBorn>
  		<BirthTimeIs><![CDATA[//select[@id='pg:Form:birthTimeIs']]]></BirthTimeIs>
  		<DaylightSavingsTime><![CDATA[//select[@id='pg:Form:daylightSavingsTime']]]></DaylightSavingsTime>
  	</YourBirthDetails>
+ <BirthTime>
+        <BSource><![CDATA[//select[@id='pg:Form:BTSourceList:0:bts']]]></BSource>
+        <BHour><![CDATA[//select[@id='pg:Form:BTSourceList:0:bthr']]]></BHour>
+        <BMinute><![CDATA[//select[@id='pg:Form:BTSourceList:0:btmin']]]></BMinute>
+        <BAccuracy><![CDATA[//select[@id='pg:Form:BTSourceList:0:bta']]]></BAccuracy>
+ </BirthTime>
  	<HealthIssues>
  		<Issue><![CDATA[//input[@id='pg:Form:healthList:0:healthIssue']]]></Issue>
  		<FromDay><![CDATA[//select[@id='pg:Form:healthList:0:fromDay']]]></FromDay>
@@ -134,6 +143,15 @@
  	</BodyWeight>
  	<TMProgram><![CDATA[//select[@id='pg:Form:TmProg']]]></TMProgram>
  	<DecisionMakingPatterns><![CDATA[//select[@id='pg:Form:decisionMakingPattern']]]></DecisionMakingPatterns>
+<Relationships>
+    <Father><![CDATA[//select[@id='pg:Form:relationshipFather']]]></Father>
+    <Mother><![CDATA[//select[@id='pg:Form:relationshipMother']]]></Mother>
+    <Spouse><![CDATA[//select[@id='pg:Form:relationshipSpouse']]]></Spouse>
+    <Friends><![CDATA[//select[@id='pg:Form:relationshipFriends']]]></Friends>
+    <Child1><![CDATA[//select[@id='pg:Form:j_id749:0:relSonDau']]]></Child1>
+    <ESibling1><![CDATA[//select[@id='pg:Form:j_id757:0:relBroSis']]]></ESibling1>
+    <YSibling1><![CDATA[//select[@id='pg:Form:j_id765:0:relBroSis']]]></YSibling1>
+</Relationships>
  	<Inheritance><![CDATA[//select[@id='pg:Form:InhList:0:Inheritance']]]></Inheritance>
  	<SubmitForm><![CDATA[//input[@id='pg:Form:UploadBtn']]]></SubmitForm>
  	<DoYouAgree><![CDATA[//select[@id='pg:Form:doYouAgree']]]></DoYouAgree>

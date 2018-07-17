@@ -11,16 +11,36 @@
 	     <suite-file path="SubmitCBCApplicationAsUpgrade.xml"></suite-file>
 	     <suite-file path="SubmitCBCApplicationForContactDeparted.xml"></suite-file>
 	     <suite-file path="SubmitCBCApplicationAsComplementryOverride.xml"></suite-file>
+	     <suite-file path="SubmitADCBCApplication.xml"></suite-file>
+	     <suite-file path="SubmitADCBCApplicationForIndividualWithCode.xml"></suite-file>
+	     <suite-file path="SubmitADCBCApplicationForOrgWithCode.xml"></suite-file>
+	     <suite-file path="SubmitADCBCApplicationForOverride.xml"></suite-file>
+	     <suite-file path="SubmitADCBCApplicationAsComplementry.xml"></suite-file>
+	     <suite-file path="SubmitADCBCApplicationForPMTH.xml"></suite-file>
 	     <suite-file path="SubmitACBTApplication.xml"></suite-file>
 	     <suite-file path="SubmitACBTApplicationAsComplementry.xml"></suite-file>
 	     <suite-file path="SubmitACBTApplicationForIndividual.xml"></suite-file>
 	     <suite-file path="SubmitACBTApplicationForOverride.xml"></suite-file>
 	     <suite-file path="SubmitACBTApplicationForPMTH.xml"></suite-file>
 	     <suite-file path="SubmitMUHApplication.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationForOrg.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationForIndividualWithCode.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationForOrgWithCode.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationAsComplementary.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationForPMTH.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationAsOverride.xml"></suite-file>
 	     <suite-file path="SubmitNAMApplicationForChild.xml"></suite-file>
 	     <suite-file path="SubmitNAMApplicationForOrg.xml"></suite-file>
 	     <suite-file path="SubmitNAMApplicationForChildWithCode.xml"></suite-file>
+	     <suite-file path="SubmitNAMApplicationAsComplementary.xml"></suite-file>
+	     <suite-file path="SubmitNAMApplicationForOverride.xml"></suite-file>
+	     <suite-file path="SubmitNAMApplicationForPMTH.xml"></suite-file>
 	     <suite-file path="SubmitCOMApplication.xml"></suite-file>
 	     <suite-file path="SubmitCOMApplicationForOrg.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationForIndividualwithcode.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationForOrgWithCode.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationAsComplementary.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationForOverride.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationForPMTH.xml"></suite-file>
       </suite-files>
 </suite>

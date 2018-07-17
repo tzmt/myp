@@ -6,14 +6,13 @@ import java.util.Random;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import com.mya.pagehelper.CBCApplicationHelper;
 import com.mya.pagehelper.MYPApplicationHelper;
 import com.mya.pagehelper.SFDCHelper;
 import com.mya.pagehelper.SignupHelper;
 import com.mya.util.DriverTestCase;
 import com.mya.util.ExecutionLog;
 
-public class SubmitMJPApplication extends DriverTestCase
+public class SubmitMYPApplicationFromUS extends DriverTestCase
 {	
 	@Test
 	public void testMYPApplication() throws Exception
@@ -21,7 +20,6 @@ public class SubmitMJPApplication extends DriverTestCase
 		//Initialize objects
 		myphelpers = new MYPApplicationHelper(getWebDriver());
 		sfdchelper = new SFDCHelper(getWebDriver());
-		cbchelpers = new CBCApplicationHelper(getWebDriver());
 
 		//variables
 		String lastname = "Khan" +getRandomInteger(1, 9999);
@@ -44,7 +42,13 @@ public class SubmitMJPApplication extends DriverTestCase
 			myphelpers.sendKeys("//*[@id='pg:form:ALNameId']", lastname);
 			
 			//Select Country
-			myphelpers.SelectCountry("India");
+			myphelpers.SelectCountry("United States");
+			
+			//Wait for page to be updated 
+			myphelpers.waitForWorkAroundTime(5000);
+			
+			//Select Member status
+			myphelpers.SelectState("California");
 			
 			//Enter contact's email address
 			myphelpers.EnterContactEmail(lastname+"@yopmail.com");
@@ -89,7 +93,7 @@ public class SubmitMJPApplication extends DriverTestCase
 			myphelpers.ConfirmTerms("Yes, I agree to the conditions");
 			
 			//Confirm third party consent
-			//myphelpers.SelectConsent("Yes");
+			myphelpers.SelectConsent("Yes");
 			
 			//Wait for a second
 			myphelpers.waitForWorkAroundTime(3000);
@@ -112,9 +116,6 @@ public class SubmitMJPApplication extends DriverTestCase
 			//Enter Billing postal code
 			myphelpers.EnterBillingPostalCode("201301");
 			
-			//Select privacy policy check box
-			cbchelpers.ClickItem("BillingInfo.PrivacyPolicy");
-			
 			//Select Donate by other mean option
 			myphelpers.ClickDonateByOtherMean();
 			
@@ -135,28 +136,6 @@ public class SubmitMJPApplication extends DriverTestCase
 			
 			//Verify Account Details page
 			sfdchelper.VerifySFDCPageTitle("Account Detail");
-			
-			//Now go to Email notification
-			//getWebDriver().navigate().to("http://yopmail.com");
-			
-			//wait for Yopmail page to load 
-			//myphelpers.waitForWorkAroundTime(3000);
-			
-			//Enter email username 
-			//myphelpers.FillinData("YMailLogin", lastname);
-			
-			//Click Check mail button
-			//myphelpers.ClickItem("CheckYMail");
-			
-			//Wait for mails to load
-			//myphelpers.waitForWorkAroundTime(3000);
-			
-			//Select iframe
-			//myphelpers.SelectiFrame("ifmail");
-			
-			//Wait for mails to load
-			//myphelpers.waitForWorkAroundTime(7000);
-			
 
 		}
 

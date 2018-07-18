@@ -41,6 +41,7 @@ public class SFDCHelper extends DriverHelper {
 		Assert.assertTrue(getText(locator).contains(value), "Expected Text :" + value + " but Found: "+getText(locator));
 	}
 	
+	
 	 //Verify Account Code
 		public void VerifyAccountCode(String value)
 		{

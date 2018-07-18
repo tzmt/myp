@@ -6,6 +6,8 @@
  		<FName><![CDATA[//input[@id='pg:frm:FirstName']]]></FName>
  		<LName><![CDATA[//input[@id='pg:frm:LastName']]]></LName>
  		<CountryOfRes><![CDATA[//select[@id='pg:frm:countryOfResidence']]]></CountryOfRes>
+ 		<JMemberStatus><![CDATA[//select[@id='pg:frm:memberStatus']]]></JMemberStatus>
+ 		<USState><![CDATA[//select[@id='pg:frm:state']]]></USState>
  		<EmailAdd><![CDATA[//input[@id='pg:frm:contactEmail']]]></EmailAdd>
  		<TeleNum><![CDATA[//input[@id='pg:frm:contactPhone']]]></TeleNum>
  		<ApplicantsGen><![CDATA[//select[@id='pg:frm:applicantsGender']]]></ApplicantsGen>
@@ -69,4 +71,5 @@
  	     <Cancel><![CDATA[//span[@id='pg:SiteTemplate:j_id81']/span[2]/span/button[1]]]></Cancel>
  	</CheckOut>
  	<Consent><![CDATA[//*[@id='pg:frm:consentAP']]]></Consent>
+ 	<OK><![CDATA[//*[@id='error-dialogBox']/div/div[3]/span]]></OK>
 </Locators>  

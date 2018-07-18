@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="Functional Automation"
+	annotations="JDK">
+	<suite-files>
+	     
+	     <suite-file path="SubmitMUHApplication.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationForOrg.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationForIndividualWithCode.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationForOrgWithCode.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationAsComplementary.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationForPMTH.xml"></suite-file>
+	     <suite-file path="SubmitMUHApplicationAsOverride.xml"></suite-file>
+      </suite-files>
+</suite>

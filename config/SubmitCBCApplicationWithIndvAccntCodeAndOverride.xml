@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="Test Submit CBC Application With Indv Accnt Code And Override"
+	annotations="JDK">
+	<test name="SubmitCBCApplicationWithIndvAccntCodeAndOverride" junit="false"
+		preserve-order="true">
+		<classes>
+			<class name="com.mya.scripts.SubmitCBCApplicationWithIndvAccntCodeAndOverride"/>			
+		</classes>		
+	</test>
+</suite> 

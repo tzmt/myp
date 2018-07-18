@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="Functional Automation"
+	annotations="JDK">
+	<suite-files>
+	     <suite-file path="SubmitACBTApplication.xml"></suite-file>
+	     <suite-file path="SubmitACBTApplicationAsComplementry.xml"></suite-file>
+	     <suite-file path="SubmitACBTApplicationForIndividual.xml"></suite-file>
+	     <suite-file path="SubmitACBTApplicationForOverride.xml"></suite-file>
+	     <suite-file path="SubmitACBTApplicationForPMTH.xml"></suite-file>
+      </suite-files>
+</suite>

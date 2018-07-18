@@ -111,7 +111,7 @@ public class CBCApplicationHelper extends DriverHelper {
 	{
 		String country = cbclocator.getLocator("YoPersInfo.CountryOfRes");
 		selectDropDown(country, value);
-		waitForWorkAroundTime(1000);
+		waitForWorkAroundTime(3000);
 	}
 
 	//select contact country of Residence
@@ -255,6 +255,26 @@ public class CBCApplicationHelper extends DriverHelper {
 	{
 		String locator = cbclocator.getLocator(xmlnode);
 		clickOn(locator);
+	}
+	
+	//Verify Validation message
+	public void VerifyValidationMessage(String value)
+	{
+		String locator =  "//*[@id='error-dialogBox']/div/div[2]/ul/li";
+		Assert.assertTrue(isElementPresent(locator), "Element Locator :"
+					+ locator + " Not found");
+		this.WaitForElementPresent(locator, 20);
+		Assert.assertTrue(getText(locator).contains(value), "Expected Text :" + value + " but Found: "+getText(locator));
+	}
+	
+	//Verify Validation field message
+	public void VerifyFieldValidation(String value)
+	{
+		String locator =  "//*[@id='pg:frm:j_id66']/span[1]/span/span";
+		Assert.assertTrue(isElementPresent(locator), "Element Locator :"
+					+ locator + " Not found");
+		this.WaitForElementPresent(locator, 20);
+		Assert.assertTrue(getText(locator).contains(value), "Expected Text :" + value + " but Found: "+getText(locator));
 	}
 
 }

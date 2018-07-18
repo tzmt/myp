@@ -88,13 +88,11 @@ public class SubmitMYPApplicationFromJapan extends DriverTestCase
 			
 			//Select Donation will be made
 			myphelpers.DonationMode("In A Single Donation");
+			myphelpers.waitForWorkAroundTime(3000);
 			
 			//confirm agreement with the terms
 			myphelpers.ConfirmTerms("Yes, I agree to the conditions");
-			
-			//Confirm third party consent
-			myphelpers.SelectConsent("Yes");
-			
+		
 			//Wait for a second
 			myphelpers.waitForWorkAroundTime(3000);
 			
@@ -115,6 +113,9 @@ public class SubmitMYPApplicationFromJapan extends DriverTestCase
 			
 			//Enter Billing postal code
 			myphelpers.EnterBillingPostalCode("201301");
+			
+			//Select privacy policy check box
+			cbchelpers.ClickItem("BillingInfo.PrivacyPolicy");
 			
 			//Select Donate by other mean option
 			myphelpers.ClickDonateByOtherMean();

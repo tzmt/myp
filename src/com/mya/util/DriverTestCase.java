@@ -64,6 +64,9 @@ public abstract class DriverTestCase
 	protected String CBC_app_url_Orgaccnt = propertyReader.readApplicationFile("CBC_URL_Orgaccnt");
 	protected String CBC_app_url_CMP = propertyReader.readApplicationFile("CBC_URL_CMP");
 	protected String CBC_app_url_CMPOverride = propertyReader.readApplicationFile("CBC_URL_Cmpoverride");
+	protected String CBC_app_url_Indvaccntoverride=propertyReader.readApplicationFile("CBC_URL_Indvaccntoverride");
+	protected String CBC_app_url_Orgaccntoverride=propertyReader.readApplicationFile("CBC_URL_Orgaccntoverride");
+	protected String CBC_app_url_PMTHAndOverride=propertyReader.readApplicationFile("CBC_URL_PMTHAndOverride");
 	protected String CBC_app_url_PMTH = propertyReader.readApplicationFile("CBC_URL_PMTH");
 	protected String CBC_app_url_Override = propertyReader.readApplicationFile("CBC_URL_Override");
 	protected String CBC_app_url_Upgrade = propertyReader.readApplicationFile("CBC_URL_Upgrade");

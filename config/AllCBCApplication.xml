@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="Functional Automation"
+	annotations="JDK">
+	<suite-files>
+	     <suite-file path="SubmitCBCApplication.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationWithIndvAccntCode.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationWithOrgAccntCode.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationAsComplementry.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationForOverride.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationForPMTH.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationAsUpgrade.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationForContactDeparted.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationAsComplementryOverride.xml"></suite-file>	     
+	     <suite-file path="SubmitCBCApplicationForPMTHAndOverride.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationWithIndvAccntCodeAndOverride.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationWithOrgAccntCodeAndOverride.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationWithBlankFields.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationFromJapan.xml"></suite-file>
+	     <suite-file path="SubmitCBCApplicationFromUS.xml"></suite-file>
+      </suite-files>
+</suite>

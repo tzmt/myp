@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="Functional Automation"
+	annotations="JDK">
+	<suite-files>
+	     <suite-file path="SubmitCOMApplication.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationForOrg.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationForIndividualwithcode.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationForOrgWithCode.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationAsComplementary.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationForOverride.xml"></suite-file>
+	     <suite-file path="SubmitCOMApplicationForPMTH.xml"></suite-file>
+      </suite-files>
+</suite>
